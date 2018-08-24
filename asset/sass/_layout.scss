@@ -1,28 +1,3 @@
-table {
-  border-top: 5px solid #000;
-}
-
-table th {
-  border: 0;
-}
-
-table td,
-table th {
-  border-bottom: 1px solid #000;
-
-  &:not(:last-child) {
-    border-right: 1px solid #000;
-  }
-}
-
-table tr {
-  background-color: transparentize($blue-color, .95);
-}
-
-table tr:nth-child(2n) {
-  background-color: transparentize($yellow-color, .95);
-}
-
 /**
  * Site header
  */
