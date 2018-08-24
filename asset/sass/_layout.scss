@@ -1,3 +1,28 @@
+table {
+  border-top: 5px solid #000;
+}
+
+table th {
+  border: 0;
+}
+
+table td,
+table th {
+  border-bottom: 1px solid #000;
+
+  &:not(:last-child) {
+    border-right: 1px solid #000;
+  }
+}
+
+table tr {
+  background-color: transparentize($blue-color, .95);
+}
+
+table tr:nth-child(2n) {
+  background-color: transparentize($yellow-color, .95);
+}
+
 /**
  * Site header
  */
@@ -13,9 +38,16 @@
 
     &:hover,
     &:active {
-        color: $blue-color;
         text-decoration: none;
     }
+}
+
+.site-header .wrapper {
+  padding: 0;
+
+  & > * {
+    padding: 0 30px;
+  }
 }
 
 .site-title {
@@ -29,17 +61,27 @@
   display: block;
   text-align: center;
   position: relative;
+  background-color: transparentize($yellow-color, .2);
+
+  &:before,
+  &:after {
+    content: "";
+    display: inline-block;
+    background: url('../img/title-ornament.svg') center no-repeat;
+    background-size: cover;
+    height: 1rem;
+    width: 5em;
+    position: static;
+  }
 
   &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: -9999px;
-      right: -9999px;
-      background-color: transparentize($yellow-color, .15);
-      z-index: -1;
-  }
+    margin-right: 1rem;
+}
+
+  &:after {
+    transform: scale(-1,1);
+    margin-left: 1rem;
+}
 }
 
 .site-nav {

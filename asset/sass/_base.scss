@@ -19,7 +19,9 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  background-image: url('../img/bg.png');
+  background: url('../img/bg.jpg') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
