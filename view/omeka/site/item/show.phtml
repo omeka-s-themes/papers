@@ -23,9 +23,11 @@ $itemMedia = $item->media();
     <?php $itemSets = $item->itemSets(); ?>
     <?php if (count($itemSets) > 0): ?>
     <h4><?php echo $translate('Item sets'); ?></h4>
-    <?php foreach ($itemSets as $itemSet): ?>
-    <div class="value"><a href="<?php echo $escape($itemSet->url()); ?>"><?php echo $itemSet->displayTitle(); ?></a></div>
-    <?php endforeach; ?>
+    <div class="values">
+        <?php foreach ($itemSets as $itemSet): ?>
+        <div class="value"><a href="<?php echo $escape($itemSet->url()); ?>"><?php echo $itemSet->displayTitle(); ?></a></div>
+        <?php endforeach; ?>
+    </div>
     <?php endif; ?>
 </div>
 <?php if (!$embedMedia && $itemMedia): ?>
