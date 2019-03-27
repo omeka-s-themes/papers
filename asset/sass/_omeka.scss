@@ -83,6 +83,7 @@
     margin: $spacing-unit 0;
     border-top: 1px solid $grey-color-dark;
     padding-top: $spacing-unit;
+    max-width: 800px;
     
     .resource {
         display: flex;
@@ -103,6 +104,11 @@
     .item-thumbnail + .item-meta {
         width: 80%;
         margin-left: $spacing-unit;
+    }
+    
+    h4 {
+        margin-bottom: 0;
+        font-variant: small-caps;
     }
 }
 
