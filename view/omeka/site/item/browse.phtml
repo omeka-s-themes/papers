@@ -59,18 +59,16 @@ foreach ($items as $item):
     $body = $item->value($bodyTerm);
 ?>
     <li class="item resource">
-        <?php echo $item->linkRaw($this->thumbnail($item, 'medium'), null, ['class' => 'item-thumbnail']); ?>
-        <div class="item-meta">
-            <h4><?php echo $item->link($heading); ?></h4>
-            <?php if ($body): ?>
-            <div class="description"><?php echo $body; ?></div>
-            <?php endif; ?>
-        </div>
+        <?php if ($thumbnail = $this->thumbnail($item, 'medium')): ?>
+        <?php echo $item->linkRaw($thumbnail); ?>
+        <?php endif; ?>
+        <h4><?php echo $item->link($heading); ?></h4>
+        <?php if ($body): ?>
+        <div class="description"><?php echo $body; ?></div>
+        <?php endif; ?>
     </li>
 <?php endforeach; ?>
 </ul>
 <?php echo ($itemSetShow) ? '</div>' : ''; ?>
 <?php $this->trigger('view.browse.after'); ?>
-<div class="browse-controls">
-    <?php echo $this->pagination(); ?>
-</div>
+<?php echo $this->pagination(); ?>
