@@ -96,7 +96,7 @@
         align-self: flex-end;
     }
     
-    .item-meta {
+    .item-thumbnail + .item-meta {
         width: 80%;
         margin-left: $spacing-unit;
     }
