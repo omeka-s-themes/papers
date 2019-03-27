@@ -77,3 +77,48 @@
     max-width: 900px;
     margin: auto;
 }
+
+.item.browse .resource-list {
+    list-style: none;
+    margin: $spacing-unit 0;
+    border-top: 1px solid $grey-color-dark;
+    padding-top: $spacing-unit;
+    
+    .resource {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: $spacing-unit;        
+        border-bottom: 1px solid $grey-color-dark;
+        padding-bottom: $spacing-unit;
+    }
+    
+    .item-thumbnail {
+        align-self: flex-end;
+    }
+    
+    .item-meta {
+        width: 80%;
+        margin-left: $spacing-unit;
+    }
+}
+
+.browse-controls {
+    align-items: center;
+}
+
+.browse-controls .sorting {
+    order: 1;
+    margin-right: $spacing-unit;
+}
+
+.browse-controls .advanced-search {
+    order: 2;
+}
+
+.browse-controls .pagination {
+    order: 3;
+    
+    form {
+        margin-right: (.5 * $spacing-unit);
+    }
+}
