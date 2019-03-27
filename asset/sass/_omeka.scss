@@ -184,9 +184,9 @@
 
 .item.show table {
     max-width: 800px;
-    margin: 0 auto (2 * $spacing-unit);
 }
 
 .item.show h3 {
     text-align: center;
+    margin: (2 * $spacing-unit) auto 0;
 }
