@@ -30,6 +30,7 @@ $itemMedia = $item->media();
 </div>
 <?php if (!$embedMedia && $itemMedia): ?>
 <div class="media-list">
+    <h4><?php echo $translate('Media'); ?></h4>
     <?php foreach ($itemMedia as $media): ?>
         <?php echo $media->linkPretty(); ?>
     <?php endforeach; ?>
