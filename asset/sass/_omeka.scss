@@ -166,6 +166,10 @@
     }
 }
 
+.media-list {
+    margin-bottom: 2 * $spacing-unit;
+}
+
 .media-list .resource-link {
     display: flex;
     align-items: center;
@@ -180,5 +184,9 @@
 
 .item.show table {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto (2 * $spacing-unit);
+}
+
+.item.show h3 {
+    text-align: center;
 }
