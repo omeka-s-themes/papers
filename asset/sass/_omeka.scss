@@ -76,10 +76,14 @@
 .blocks {
     max-width: 1200px;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .blocks h2 {
-  width: 100%;
+    width: 100%;
+    text-align: center;
 }
 .toc-block ul {
   list-style: none;
