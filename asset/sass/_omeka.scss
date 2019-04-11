@@ -250,3 +250,14 @@
     text-align: center;
     margin: (2 * $spacing-unit) auto 0;
 }
+
+.breadcrumbs {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 0;
+    text-align: center;
+    border-bottom: 1px solid $grey-color-dark;
+    padding-bottom: (.5 * $spacing-unit);
+    margin-bottom: $spacing-unit;
+    font-size: .875 * $base-font-size;
+}
