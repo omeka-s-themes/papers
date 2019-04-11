@@ -1,3 +1,11 @@
+blockquote {
+    color: #000;
+    font-style: normal;
+    letter-spacing: normal;
+    margin: (2 * $spacing-unit) 0;
+    border-color: $grey-color-dark;
+}
+
 /**
  * Site header
  */
