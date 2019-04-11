@@ -74,24 +74,20 @@
 }
 
 .blocks {
-    max-width: 1200px;
+    max-width: 900px;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .blocks h2 {
     width: 100%;
     text-align: center;
 }
+
 .toc-block ul {
   list-style: none;
   margin-left: 0;
 }
 
-.toc-block > ul > li:not(:last-child) {
-}
 .toc-block a {
   padding: (.25 * $spacing-unit)px 0;
   display: block;
@@ -106,11 +102,6 @@
   display: flex;
 }
 
-.blocks > .toc-block {
-  width: 30%;
-  padding-right: $spacing-unit;
-}
-
 .toc-block > ul > li {
   border-top: 3px solid #000;
   font-variant: small-caps;
@@ -123,9 +114,7 @@
   margin-top: 6px;
 }
 
-.blocks > * {
-  width: 70%;
-}
+
 
 .item.browse .page-content .wrapper {
     max-width: 900px;
