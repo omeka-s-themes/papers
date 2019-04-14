@@ -2,6 +2,7 @@
 $escape = $this->plugin('escapeHtml');
 $translate = $this->plugin('translate');
 $this->htmlElement('body')->appendAttribute('class', 'item resource browse');
+$siteItemSets = $site->siteItemSets();
 
 $query = $this->params()->fromQuery();
 $itemSetShow = isset($itemSet);
@@ -27,23 +28,27 @@ $sortHeadings = [
 ];
 ?>
 
+
 <?php if ($itemSetShow): ?>
-    <?php echo $this->pageTitle($itemSet->displayTitle(), 2); ?>
-    <h3><?php echo $translate('Item set'); ?></h3>
-    <div class="metadata">
-        <?php echo $itemSet->displayValues(); ?>
-    </div>
-    <div class="item-set-items">
-    <?php echo '<h3>' . $escape($translate('Items')) . '</h3>'; ?>
+    <?php echo $this->pageTitle('Collection', 2); ?>
+    <?php echo $this->pageTitle($itemSet->displayTitle(), 3); ?>
 <?php else: ?>
-    <?php echo $this->pageTitle($translate('Items'), 2); ?>
+    <?php echo $this->pageTitle('Collection', 2); ?>
 <?php endif; ?>
 
 <?php echo $this->searchFilters(); ?>
 
+<div class="collection-navigation">
+    <?php foreach ($siteItemSets as $siteItemSet): ?>
+    <?php $itemSet = $siteItemSet->itemSet(); ?>
+    <?php $itemSetTitle = $itemSet->displayTitle(); ?>
+    <?php echo $itemSet->link($itemSetTitle); ?>
+    <?php endforeach; ?>    
+    <?php echo $this->hyperlink($translate('Advanced search'), $this->url('site/resource', ['controller' => 'item', 'action' => 'search'], ['query' => $query], true), ['class' => 'advanced-search']); ?>
+</div>
+
 <div class="browse-controls">
     <?php echo $this->pagination(); ?>
-    <?php echo $this->hyperlink($translate('Advanced search'), $this->url('site/resource', ['controller' => 'item', 'action' => 'search'], ['query' => $query], true), ['class' => 'advanced-search']); ?>
     <?php echo $this->sortSelector($sortHeadings); ?>
 </div>
 
@@ -67,6 +72,5 @@ foreach ($items as $item):
     </li>
 <?php endforeach; ?>
 </ul>
-<?php echo ($itemSetShow) ? '</div>' : ''; ?>
 <?php $this->trigger('view.browse.after'); ?>
 <?php echo $this->pagination(); ?>
