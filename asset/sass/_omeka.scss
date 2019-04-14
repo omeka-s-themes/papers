@@ -83,15 +83,27 @@
     text-align: center;
 }
 
+.toc-block {
+    margin: 0 (-.5 * $spacing-unit);
+}
+
+.toc-block .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .toc-block ul {
   list-style: none;
   margin-left: 0;
 }
 
 .toc-block a {
-  padding: (.25 * $spacing-unit)px 0;
+  padding: (.25 * $spacing-unit) 0;
   display: block;
+  color: #000;
 }
+
 .toc-block ul ul a {
   padding-left: 0;
 }
@@ -105,13 +117,19 @@
 .toc-block > ul > li {
   border-top: 3px solid #000;
   font-variant: small-caps;
+  background-color: $light-blue-color;
+  width: calc(50% - #{$spacing-unit});
+  margin: $spacing-unit (.5 * $spacing-unit);
+  padding: (.5 * $spacing-unit) $spacing-unit;
 }
 
 .toc-block ul ul li:before {
-  content: "—";
+  content: "\f005";
   display: inline-block;
-  margin-right: 15px;
-  margin-top: 6px;
+  margin-right: (.5 * $spacing-unit);
+  margin-top: 14px;
+  font-family: "Font Awesome 5 Free";
+  font-size: 10px;
 }
 
 
