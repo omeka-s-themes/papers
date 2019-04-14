@@ -40,15 +40,16 @@ $sortHeadings = [
 
 <div class="collection-navigation">
     <?php foreach ($siteItemSets as $siteItemSet): ?>
-    <?php $itemSet = $siteItemSet->itemSet(); ?>
-    <?php $itemSetTitle = $itemSet->displayTitle(); ?>
-    <?php echo $itemSet->link($itemSetTitle); ?>
+        <?php $itemSet = $siteItemSet->itemSet(); ?>
+        <?php $itemSetTitle = $itemSet->displayTitle(); ?>
+        <?php echo $itemSet->link($itemSetTitle); ?>
     <?php endforeach; ?>    
-    <?php echo $this->hyperlink($translate('Advanced search'), $this->url('site/resource', ['controller' => 'item', 'action' => 'search'], ['query' => $query], true), ['class' => 'advanced-search']); ?>
+    <?php echo $this->hyperlink('All', $this->url('site/resource', ['controller' => 'item', 'action' => 'browse'], [], true)); ?>
 </div>
 
 <div class="browse-controls">
     <?php echo $this->pagination(); ?>
+    <?php echo $this->hyperlink($translate('Advanced search'), $this->url('site/resource', ['controller' => 'item', 'action' => 'search'], ['query' => $query], true), ['class' => 'advanced-search']); ?>
     <?php echo $this->sortSelector($sortHeadings); ?>
 </div>
 

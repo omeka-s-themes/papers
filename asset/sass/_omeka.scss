@@ -154,6 +154,19 @@
     }
 }
 
+.collection-navigation {
+    justify-content: center;
+    display: flex;
+    border-bottom: 1px solid $grey-color-dark;
+    padding-bottom: (.5 * $spacing-unit);
+    margin-bottom: $spacing-unit;
+}
+
+.collection-navigation a {
+    display: block;
+    margin: 0 (.5 * $spacing-unit);
+}
+
 .browse-controls {
     align-items: center;
 }
