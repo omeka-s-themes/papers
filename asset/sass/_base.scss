@@ -291,7 +291,7 @@ button,
 input[type="submit"] {
   cursor: pointer;
   background-color: $light-blue-color;
-  color: #000;
+  color: #000 !important;
   border: 1px solid #000;
   border-width: 3px 1px 1px;
   border-radius: 0;
@@ -301,6 +301,10 @@ input[type="submit"] {
       border: 1px solid $grey-color;
       color: $grey-color;
       cursor: default;
+  }
+
+  &.yellow {
+    background-color: $yellow-color;
   }
 }
 
