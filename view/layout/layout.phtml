@@ -32,7 +32,7 @@ $userBar = $this->userBar();
         <header class="site-header" role="banner">
             <div class="wrapper">
                 <?php if ($this->themeSetting('logo')): ?>
-                <a href="<?php echo $site->url(); ?>" class="site-title"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
+                <a href="<?php echo $site->url(); ?>" class="site-title logo"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
                 <?php else: ?>
                 <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $site->title(); ?></a>
                 <?php endif; ?>

@@ -64,6 +64,20 @@ blockquote {
     width: 5em;
     position: static;
   }
+  
+  &.logo:before,
+  &.logo:after {
+      content: none;
+  }
+  
+  &.logo {
+      padding: (.5 * $spacing-unit);
+  }
+  
+  &.logo img {
+      max-height: 1.5 * $spacing-unit;
+      width: auto;
+  }
 
   &:before {
     margin-right: 1rem;
