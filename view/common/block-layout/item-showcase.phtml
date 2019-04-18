@@ -1,0 +1,38 @@
+<div class="item-showcase">
+<?php foreach ($attachments as $attachment): ?>
+    <div class="item resource">
+    <?php $item = $attachment->item(); ?>
+
+    <?php if ($item): ?>
+        <?php if ($imageItem = $item->value('pwd:image')): ?>
+            <?php $imageItemResource = $imageItem->valueResource(); ?>
+            <?php $thumbnail = $this->thumbnail($imageItemResource, $this->thumbnailType); ?>
+            <?php echo $item->linkRaw($thumbnail, null, ['class' => 'item-thumbnail']); ?>
+        <?php endif; ?>
+
+        <?php $showTitleOption = $this->showTitleOption; ?>
+        <?php if ($showTitleOption == 'item_title'): ?>
+            <h3><?php echo $item->link($item->displayTitle()); ?></h3>
+        <?php elseif ($showTitleOption == 'file_name'): ?>
+            <h3><?php echo $media->displayTitle(); ?>
+        <?php endif; ?>
+
+        <?php if ($block->page()->slug() == 'home'): ?>
+            <?php $sItem = $this->api()->searchOne('scripto_items', ['item_id' => $item->id()])->getContent(); ?>
+            <?php $completedMediaCount = $sItem->isCompletedMediaCount(); ?>
+            <?php $totalMediaCount = $sItem->mediaCount(); ?>
+            <?php $incompleteMediaCount = $totalMediaCount - $completedMediaCount; ?>
+            <div class="description"><?php echo $item->value('dcterms:description'); ?></div>
+            <a href="<?php echo $this->url('scripto-media', ['site-slug' => 'home', 'site-project-id' => 1, 'project-id' => 1, 'item-id' => $item->id()]); ?>" class="media-count button"><?php echo $incompleteMediaCount; ?> pages needing transcription</a>
+        <?php endif; ?>
+    <?php endif; ?>
+
+    <?php
+    $caption = $attachment->caption();
+    if ($caption):
+    ?>
+        <div class="caption"><?php echo $caption; ?></div>
+    <?php endif; ?>
+    </div>
+<?php endforeach; ?>
+</div>
