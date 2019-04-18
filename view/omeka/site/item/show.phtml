@@ -55,3 +55,10 @@ $subjectValues = $item->displaySubjectValues($page, 25, $property);
 <?php endif; ?>
 
 <?php $this->trigger('view.show.after'); ?>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery(document).trigger('enhance.tablesaw');        
+    });
+</script>

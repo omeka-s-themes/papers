@@ -412,7 +412,12 @@
     font-style: italic;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:39.9375em) {
+    table th:not(:last-child), 
+    table td:not(:last-child) {
+        border-right: 0;
+    }
+    
     .blocks .intro {
         padding: $spacing-unit;
     }
