@@ -450,4 +450,27 @@
         width: 100%;
         margin: 0 (.5 * $spacing-unit) $spacing-unit;
     }
+
+    .browse-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .browse-controls .sorting {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .browse-controls .advanced-search {
+        margin: (.5 * $spacing-unit);
+    }
+    
+    .browse-controls .pagination {
+        margin-left: 0;
+    }
+    
+    .item.browse .resource-list .item-thumbnail {
+        align-self: flex-start;
+    }
 }

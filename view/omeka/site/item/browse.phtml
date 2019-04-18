@@ -76,4 +76,6 @@ foreach ($items as $item):
 <?php endforeach; ?>
 </ul>
 <?php $this->trigger('view.browse.after'); ?>
-<?php echo $this->pagination(); ?>
+<div class="browse-controls">
+    <?php echo $this->pagination(); ?>
+</div>
