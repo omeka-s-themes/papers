@@ -445,4 +445,9 @@
     .home .item-showcase .media-count {
         display: inline-block;
     }
+    
+    .toc-block > ul > li {
+        width: 100%;
+        margin: 0 (.5 * $spacing-unit) $spacing-unit;
+    }
 }
