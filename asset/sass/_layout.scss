@@ -57,40 +57,6 @@ table.tablesaw {
   text-align: center;
   position: relative;
   background-color: transparentize($yellow-color, .2);
-
-  &:before,
-  &:after {
-    content: "";
-    display: inline-block;
-    background: url('../img/title-ornament.svg') center no-repeat;
-    background-size: cover;
-    height: 1rem;
-    width: 5em;
-    position: static;
-  }
-  
-  &.logo:before,
-  &.logo:after {
-      content: none;
-  }
-  
-  &.logo {
-      padding: (.5 * $spacing-unit);
-  }
-  
-  &.logo img {
-      max-height: 1.5 * $spacing-unit;
-      width: auto;
-  }
-
-  &:before {
-    margin-right: 1rem;
-}
-
-  &:after {
-    transform: scale(-1,1);
-    margin-left: 1rem;
-}
 }
 
 .site-nav {
@@ -332,36 +298,6 @@ ul.user-menu {
      padding: 0;
  }
  
- footer .logos {
-     display: flex;
-     justify-content: center;
-     margin: $spacing-unit 0;
-     
-    #rrchnm-logo {
-        background: url('../img/rrchnm.png') no-repeat center/contain;
-    }
-
-    #acls-logo {
-        background: url('../img/acls.png') no-repeat center/contain;
-    }
-    
-    #nhrpc-logo {
-        background: url('../img/nhprc.png') no-repeat center/contain;
-    }
-    
-    #neh-logo {
-        background: url('../img/neh.png') no-repeat center/contain;
-    }
-
-    a {
-        height: 3 * $spacing-unit;
-        width: 25%;
-        margin: 0 $spacing-unit;
-        display: block;
-        text-indent: -9999px;
-    }     
- }
- 
 .site-footer {
   border-top: 1px solid $grey-color;
   padding: $spacing-unit 0;
@@ -370,12 +306,6 @@ ul.user-menu {
 .footer-heading {
   @include relative-font-size(1.125);
   margin-bottom: $spacing-unit / 2;
-}
-
-.contact-list,
-.social-media-list {
-  list-style: none;
-  margin-left: 0;
 }
 
 .footer-col-wrapper {
