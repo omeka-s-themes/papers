@@ -234,6 +234,18 @@
     font-size: .875 * $base-font-size;
 }
 
+.media-embeds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.media-embeds img,
+.media-embeds video,
+.media-embeds audio {
+  margin: $spacing-unit;
+}
+
 .breadcrumbs {
     max-width: 900px;
     margin: 0 auto;
