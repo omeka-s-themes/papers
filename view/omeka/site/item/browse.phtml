@@ -10,8 +10,8 @@ if ($itemSetShow):
     $this->htmlElement('body')->appendAttribute('class', 'item-set');
     $query['item_set_id'] = $itemSet->id();
 endif;
-$headingTerm = $this->siteSetting('browse_heading_property_term', 'dcterms:title');
-$bodyTerm = $this->siteSetting('browse_body_property_term', 'dcterms:description');
+$headingTerm = $this->siteSetting('browse_heading_property_term');
+$bodyTerm = $this->siteSetting('browse_body_property_term');
 $sortHeadings = [
     [
         'label' => $translate('Title'),
@@ -57,21 +57,17 @@ $sortHeadings = [
 <ul class="resource-list">
 <?php
 foreach ($items as $item):
-    $heading = $item->value($headingTerm, ['default' => $translate('[Untitled]')]);
-    $body = $item->value($bodyTerm);
+    $heading = $headingTerm ? $item->value($headingTerm, ['default' => $translate('[Untitled]')]) : $item->displayTitle();
+    $body = $bodyTerm ? $item->value($bodyTerm) : $item->displayDescription();
 ?>
     <li class="item resource">
-        <?php if ($imageItem = $item->value('pwd:image')): ?>
-        <?php $imageItemResource = $imageItem->valueResource(); ?>
-        <?php $thumbnail = $this->thumbnail($imageItemResource, 'square'); ?>
-        <?php echo $item->linkRaw($thumbnail, null, ['class' => 'item-thumbnail']); ?>
-        <?php endif; ?>
         <div class="item-meta">
             <h4><?php echo $item->link($heading); ?></h4>
             <?php if ($body): ?>
             <div class="description"><?php echo $body; ?></div>
             <?php endif; ?>
         </div>
+        <?php echo $item->linkRaw($this->thumbnail($item, 'medium'), null, ['class' => 'item-thumbnail']); ?>
     </li>
 <?php endforeach; ?>
 </ul>

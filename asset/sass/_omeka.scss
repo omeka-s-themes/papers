@@ -83,16 +83,11 @@
         padding-bottom: $spacing-unit;
     }
     
-    .item-thumbnail {
-        align-self: flex-end;
-    }
-    
     .item-meta {
         width: 100%;
     }
     
-    .item-thumbnail + .item-meta {
-        width: 80%;
+    .item-thumbnail {
         margin-left: $spacing-unit;
     }
     
