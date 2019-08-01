@@ -2,12 +2,12 @@
 
 var gulp = require('gulp');
 
-gulp.task('css', function () {
+function compileCss() {
     var sass = require('gulp-sass');
     var postcss = require('gulp-postcss');
     var autoprefixer = require('autoprefixer');
 
-    return gulp.src('./asset/sass/*.scss')
+    return gulp.src('./asset/sass/**/*.scss')
         .pipe(sass({
             outputStyle: 'compressed',
             includePaths: require('node-normalize-scss').with('../../node_modules/susy/sass')
@@ -15,8 +15,18 @@ gulp.task('css', function () {
         .pipe(postcss([
             autoprefixer({browsers: ['> 5%', '> 5% in US', 'last 2 versions']})
         ]))
-        .pipe(gulp.dest('./asset/css'));
-});
+        .pipe(gulp.dest('./asset/css'));  
+}
+
+function buildScriptoTheme() {
+    return gulp.src('./asset/css/scripto/papers.css')
+        .pipe(gulp.dest('../../modules/Scripto/asset/css/site-themes'));
+}
+
+gulp.task('compileCss', compileCss);
+gulp.task('buildScriptoTheme', buildScriptoTheme);
+
+gulp.task('css', gulp.series('compileCss','buildScriptoTheme'));
 
 gulp.task('css:watch', function () {
     gulp.watch('./asset/sass/*.scss', gulp.parallel('css'));
