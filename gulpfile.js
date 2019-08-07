@@ -23,11 +23,14 @@ function buildScriptoTheme() {
         .pipe(gulp.dest('../../modules/Scripto/asset/css/site-themes'));
 }
 
-gulp.task('compileCss', compileCss);
-gulp.task('buildScriptoTheme', buildScriptoTheme);
+gulp.task('css', compileCss);
 
-gulp.task('css', gulp.series('compileCss','buildScriptoTheme'));
+gulp.task('scripto', gulp.series(compileCss, buildScriptoTheme));
 
 gulp.task('css:watch', function () {
     gulp.watch('./asset/sass/*.scss', gulp.parallel('css'));
+});
+
+gulp.task('scripto:watch', function () {
+    gulp.watch('./asset/sass/**/*.scss', gulp.parallel(compileCss, buildScriptoTheme));
 });
