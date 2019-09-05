@@ -531,6 +531,12 @@ nav.pagination .row-count {
 }
 
 @media screen and (max-width:39.9375em) {
+    .site-title {
+      font-size: 1.25 * $base-font-size;
+      line-height: $base-line-height;
+      padding: (.5 * $spacing-unit) !important;
+    }
+
     table th:not(:last-child), 
     table td:not(:last-child) {
         border-right: 0;
