@@ -175,6 +175,8 @@
         text-align: right;
         margin-bottom: 0;
         font-variant: small-caps;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     a.resource-link,
@@ -349,6 +351,11 @@
     .browse-controls .sorting {
         width: 100%;
         margin-right: 0;
+        display: flex;
+        
+        select {
+          width: 40%;
+        }
     }
     
     .browse-controls .advanced-search {
@@ -361,5 +368,9 @@
     
     .item.browse .resource-list .item-thumbnail {
         align-self: flex-start;
+    }
+    
+    .property h4 {
+          padding-right: (.5 * $spacing-unit);
     }
 }
