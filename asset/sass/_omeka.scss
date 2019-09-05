@@ -129,8 +129,15 @@
 
 .browse-controls .sorting {
     order: 1;
-    margin-right: $spacing-unit;
+    margin-right: (.5 * $spacing-unit);
+    width: 30%;
+    display: flex;
+        
+    select {
+      width: 40%;
+    }
 }
+    
 
 .browse-controls .advanced-search {
     order: 2;
@@ -348,16 +355,6 @@
         text-align: center;
     }
 
-    .browse-controls .sorting {
-        width: 100%;
-        margin-right: 0;
-        display: flex;
-        
-        select {
-          width: 40%;
-        }
-    }
-    
     .browse-controls .advanced-search {
         margin: (.5 * $spacing-unit);
     }

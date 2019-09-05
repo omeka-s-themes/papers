@@ -57,6 +57,10 @@ table.tablesaw {
   text-align: center;
   position: relative;
   background-color: transparentize($yellow-color, .2);
+  
+  img {
+    margin: (.5 * $spacing-unit);
+  }
 }
 
 .site-nav {

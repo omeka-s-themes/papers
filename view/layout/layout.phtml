@@ -14,6 +14,8 @@ $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 
 $this->trigger('view.layout');
 $title = $this->pageTitle($site->title());
 $logo = $this->themeSettingAssetUrl('logo');
+$bg = $this->themeSettingAssetUrl('background_image');
+$bgStyle = $this->themeSetting('background_layout');
 if ($logo):
     $title = '<img src="' . $this->escapeHtml($logo) . '">';
 endif;
@@ -26,6 +28,40 @@ $userBar = $this->userBar();
         <?php echo $this->headTitle(); ?>
         <?php echo $this->headLink(); ?>
         <?php echo $this->headStyle(); ?>
+        <style>
+        <?php if ($bg): ?>
+          body {
+            background: url(<?php echo $this->escapeHtml($bg); ?>);
+            <?php if (isset($bgStyle) && ($bgStyle !== 'tile')): ?>
+            background-repeat: no-repeat;
+            background-size: <?php echo $bgStyle; ?>;
+            background-attachment: fixed;
+            <?php endif; ?>
+          }
+        <?php endif; ?>
+
+        <?php if ($headerColor = $this->themeSetting('header_color')): ?>
+        .site-title {
+          background-color: <?php echo $headerColor; ?>;
+        }
+        <?php endif; ?>
+        
+        <?php if ($buttonColor = $this->themeSetting('button_color')): ?>
+        buttton,
+        .button,
+        [type="submit"],
+        .toc-block > ul > li {
+          background-color: <?php echo $buttonColor; ?>;
+        }
+        <?php endif; ?>
+        
+        <?php if ($linkColor = $this->themeSetting('link_color')): ?>
+        a:link,
+        a:visited {
+          color: <?php echo $linkColor; ?>;
+        }
+        <?php endif; ?>
+        </style>
         <?php echo $this->headScript(); ?>
     </head>
 
