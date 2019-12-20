@@ -19,7 +19,6 @@
 
 .break.opaque {
     border-bottom: 1px solid $grey-color-dark;
-    margin: $spacing-unit 0;
 }
 
 .blocks {
@@ -32,38 +31,39 @@
     text-align: center;
 }
 
-.toc-block {
+.page .toc-block {
     margin: 0 (-.5 * $spacing-unit);
 }
 
-.toc-block .navigation {
+.page .toc-block .navigation {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.toc-block ul {
+.page .toc-block ul {
   list-style: none;
   margin-left: 0;
+  border-left: 0;
 }
 
-.toc-block a {
+.page .toc-block a {
   padding: (.25 * $spacing-unit) 0;
   display: block;
   color: #000;
 }
 
-.toc-block ul ul a {
+.page .toc-block ul ul a {
   padding-left: 0;
 }
 
-.toc-block ul ul li {
+.page .toc-block ul ul li {
   border-top: 1px solid #000;
   font-variant: normal;
   display: flex;
 }
 
-.toc-block > ul > li {
+.page .toc-block > ul > li {
   border-top: 3px solid #000;
   font-variant: small-caps;
   background-color: $light-blue-color;
@@ -72,42 +72,28 @@
   padding: (.5 * $spacing-unit) $spacing-unit;
 }
 
-.toc-block ul ul li:before {
+.page .toc-block ul ul li:before {
   content: "\f005";
   display: inline-block;
   margin-right: (.5 * $spacing-unit);
   margin-top: 14px;
   font-family: "Font Awesome 5 Free";
   font-size: 10px;
+  color: #000;
 }
 
-.file {
-  max-width: 25%;
-}
-
-.right.file {
-  float: right;
-  margin: 0 0 $spacing-unit $spacing-unit;
-}
-
-.left.file {
-  float: left;
-  margin: 0 $spacing-unit $spacing-unit 0;
-}
-
-.item-showcase {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  
-  .item.resource {
-    margin: $spacing-unit;
-  }
+.page .item-showcase {
+  border-color: $grey-color-dark;
+  margin: (2 * $spacing-unit) 0;
+  padding: $spacing-unit 0 0;
 }
 
 .preview-block .resource-list {
   @include resource-list;
+}
+
+.resource-list.preview + a {
+  @extend .button;
 }
 
 // Item Views
