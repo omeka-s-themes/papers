@@ -535,6 +535,10 @@ nav.pagination .row-count {
 }
 
 @media screen and (max-width:39.9375em) {
+    .site-header .wrapper > * {
+      padding: 0 (.5 * $spacing-unit);
+    }
+  
     .site-title {
       font-size: 1.25 * $base-font-size;
       line-height: $base-line-height;
@@ -543,7 +547,11 @@ nav.pagination .row-count {
 
     table th:not(:last-child), 
     table td:not(:last-child) {
-        border-right: 0;
+      border-right: 0;
+    }
+    
+    .site-nav {
+      line-height: 1;
     }
     
     .site-nav ul {
