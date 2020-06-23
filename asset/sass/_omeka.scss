@@ -136,9 +136,10 @@ header ul.navigation {
 
 // Item Views
 // ==========
-
+ 
 .items.search .page-content .wrapper,
-.item.browse .page-content .wrapper {
+.item.browse .page-content .wrapper,
+.index.search .page-content .wrapper {
     max-width: 900px;
     margin: 0 auto;
 }
@@ -329,6 +330,30 @@ header ul.navigation {
     font-style: italic;
 }
 
+// -- Search
+
+.index.search .results {
+  margin-bottom: 2 * $spacing-unit;
+}
+
+.index.search .results ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  columns: 2;
+  
+  li {
+    padding: (.5 * $spacing-unit) 0;
+    border-bottom: 1px solid #000;
+  }
+  
+  & + a {
+    display: block;
+    margin-top: $spacing-unit;
+  }
+}
+
 @media screen and (max-width:39.9375em) {
     #search {
       margin-left: 0;
@@ -402,5 +427,9 @@ header ul.navigation {
     
     .property h4 {
           padding-right: (.5 * $spacing-unit);
+    }
+    
+    .index.search .results ul {
+        columns: 1;
     }
 }
