@@ -40,7 +40,7 @@ header ul.navigation {
 // ============
 
 .breadcrumbs {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     border: 0;
     text-align: center;
@@ -60,7 +60,7 @@ header ul.navigation {
 }
 
 .blocks {
-    max-width: 900px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -139,8 +139,9 @@ header ul.navigation {
  
 .items.search .page-content .wrapper,
 .item.browse .page-content .wrapper,
-.index.search .page-content .wrapper {
-    max-width: 900px;
+.index.search .page-content .wrapper, 
+body:not([class]) .page-content .wrapper {
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -187,7 +188,7 @@ header ul.navigation {
 }
 
 .properties {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -234,7 +235,7 @@ header ul.navigation {
 }
 
 .item.show table {
-    max-width: 900px;
+    max-width: 1200px;
     margin: $spacing-unit auto;
 }
 
@@ -311,7 +312,7 @@ header ul.navigation {
 }
 
 .linked-header {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
