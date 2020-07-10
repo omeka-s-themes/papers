@@ -82,11 +82,16 @@ $userBar = $this->userBar();
                     </label>
 
                     <div class="trigger">
-                    <?php
-                    echo $site->publicNav()->menu()->renderMenu(null, [
-                        'maxDepth' => $this->themeSetting('nav_depth') - 1
-                    ]);
-                    ?>
+                        <?php
+                        echo $site->publicNav()->menu()->renderMenu(null, [
+                            'maxDepth' => $this->themeSetting('nav_depth') - 1
+                        ]);
+                        ?>
+                        <?php if ($this->themeSetting('show_search') == 1): ?>
+                        <div id="search">
+                            <?php echo $this->partial('common/search-form'); ?>
+                        </div>
+                        <?php endif; ?>
                     </div>
                 </nav>
             </div>
