@@ -1,6 +1,23 @@
 // Header
 // ======
 
+#skipnav {
+  position: fixed;
+  top: $spacing-unit;
+  left: 50%;
+  border: 1px solid $grey-color-dark;
+  transform: translateX(-50%);
+  z-index: -5;
+  padding: (.25 * $spacing-unit);
+  background-color: #fff;
+  opacity: 0;
+  
+  &:focus {
+    z-index: 1000;
+    opacity: 1;
+  }
+}
+
 header ul.navigation {
   display: inline-block
 }
