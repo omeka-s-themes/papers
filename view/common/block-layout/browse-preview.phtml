@@ -17,12 +17,18 @@ foreach ($this->resources as $resource):
 ?>
     <li class="<?php echo $this->resourceType; ?> resource">
         <div class="item-meta">
-            <h4><?php echo $resource->link($heading); ?></h4>
-            <?php if ($body): ?>
+            <h4><?php
+            if (in_array('resource-heading', $this->components)):
+                echo $resource->link($heading);
+            endif;?></h4>
+            <?php if (in_array('resource-body', $this->components) && $body): ?>
             <div class="description"><?php echo $body; ?></div>
             <?php endif; ?>
         </div>
-        <?php echo $resource->linkRaw($this->thumbnail($resource, 'medium', ['title' => $heading]), null, ['class' => 'item-thumbnail']); ?>
+        <?php
+        if (in_array('thumbnail', $this->components)):
+            echo $resource->linkRaw($this->thumbnail($resource, 'medium', ['title' => $heading]), null, ['class' => 'item-thumbnail']);
+        endif;?>
     </li>
 <?php endforeach; ?>
 </ul>
