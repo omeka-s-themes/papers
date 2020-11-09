@@ -60,7 +60,7 @@ foreach ($items as $item):
         <div class="item-meta">
             <h4><?php echo $item->link($heading); ?></h4>
             <?php if ($body): ?>
-            <div class="description"><?php echo $body; ?></div>
+            <div class="description"><?php echo $escape($body); ?></div>
             <?php endif; ?>
         </div>
         <?php echo $item->linkRaw($this->thumbnail($item, 'medium'), null, ['class' => 'item-thumbnail']); ?>
