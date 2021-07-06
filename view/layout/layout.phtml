@@ -44,14 +44,23 @@ $userBar = $this->userBar();
         .site-title {
           background-color: <?php echo $headerColor; ?>;
         }
+
+        table tr:nth-child(2n) {
+            background-color: <?php echo $this->RgbaColor($headerColor); ?>; ?>;
+        }
         <?php endif; ?>
         
         <?php if ($buttonColor = $this->themeSetting('button_color')): ?>
-        buttton,
+        button,
         .button,
+        .yellow.button,
         [type="submit"],
         .toc-block > ul > li {
-          background-color: <?php echo $buttonColor; ?>;
+          background-color: <?php echo $buttonColor; ?>
+        }
+
+        table tr {
+            background-color: <?php echo $this->RgbaColor($buttonColor); ?>;
         }
         <?php endif; ?>
         
