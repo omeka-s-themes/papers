@@ -26,7 +26,7 @@ foreach ($this->resources as $resource):
                 echo '<h4>' . $resource->link($heading) . '</h4>'; 
             endif; ?>
             <?php if ($showBody && $body): ?>
-            <div class="description"><?php echo $body; ?></div>
+            <div class="description"><?php echo $escape($body); ?></div>
             <?php endif; ?>
         </div>
         <?php
