@@ -29,16 +29,20 @@ $userBar = $this->userBar();
         <?php echo $this->headLink(); ?>
         <?php echo $this->headStyle(); ?>
         <style>
-        <?php if ($bg): ?>
           body {
-            background: url(<?php echo $this->escapeHtml($bg); ?>);
-            <?php if (isset($bgStyle) && ($bgStyle !== 'tile')): ?>
-            background-repeat: no-repeat;
-            background-size: <?php echo $bgStyle; ?>;
-            background-attachment: fixed;
+            <?php if ($bgStyle == 'none'): ?>
+                background-image: none;
+            <?php else: ?>
+                <?php if ($bg): ?>
+                background: url(<?php echo $this->escapeHtml($bg); ?>);
+                <?php endif; ?>
+                <?php if (isset($bgStyle) && ($bgStyle !== 'tile')): ?>
+                background-repeat: no-repeat;
+                background-size: <?php echo $bgStyle; ?>;
+                background-attachment: fixed;
+                <?php endif; ?>
+            }
             <?php endif; ?>
-          }
-        <?php endif; ?>
 
         <?php if ($headerColor = $this->themeSetting('header_color')): ?>
         .site-title {
