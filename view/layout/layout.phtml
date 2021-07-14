@@ -16,6 +16,7 @@ $title = $this->pageTitle($site->title());
 $logo = $this->themeSettingAssetUrl('logo');
 $bg = $this->themeSettingAssetUrl('background_image');
 $bgStyle = $this->themeSetting('background_layout');
+$bgColor = $this->themeSetting('bg_color');
 if ($logo):
     $title = '<img src="' . $this->escapeHtml($logo) . '">';
 endif;
@@ -32,6 +33,7 @@ $userBar = $this->userBar();
           body {
             <?php if ($bgStyle == 'none'): ?>
                 background-image: none;
+                background-color: <?php echo ($bgColor) ? $bgColor : "#fefefe"; ?>
             <?php else: ?>
                 <?php if ($bg): ?>
                 background: url(<?php echo $this->escapeHtml($bg); ?>);
@@ -41,8 +43,8 @@ $userBar = $this->userBar();
                 background-size: <?php echo $bgStyle; ?>;
                 background-attachment: fixed;
                 <?php endif; ?>
-            }
             <?php endif; ?>
+          }
 
         <?php if ($headerColor = $this->themeSetting('header_color')): ?>
         .site-title {
