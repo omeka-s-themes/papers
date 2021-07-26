@@ -301,26 +301,26 @@ body:not([class]) .page-content .wrapper {
     display: none;
 }
 
-#advanced-search .field {
+.field {
     display: flex;
     margin-bottom: $spacing-unit;
 }
 
-#advanced-search .field-meta {
+.field-meta {
     width: 20%;
     padding-right: (.25 * $spacing-unit);
 }
 
-#advanced-search .field-meta .label {
+.field-meta .label {
     font-size: 1.25 * $base-font-size;
 }
 
-#advanced-search .inputs {
+.field .inputs {
     width: 80%;
     padding-left: .25 * $spacing-unit;
 }
 
-#advanced-search .field-description {
+.field .field-description {
     font-size: .875 * $base-font-size;
 }
 
