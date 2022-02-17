@@ -19,8 +19,9 @@ $itemMedia = $item->media();
 <?php endif; ?>
 <div class="properties">
 <?php echo $item->displayValues(); ?>
+<?php $itemSets = $item->itemSets(); ?>
+<?php if (count($itemSets) > 0): ?>
 <div class="property">
-    <?php $itemSets = $item->itemSets(); ?>
     <?php if (count($itemSets) > 0): ?>
     <h4><?php echo $translate('Item sets'); ?></h4>
     <div class="values">
@@ -30,6 +31,7 @@ $itemMedia = $item->media();
     </div>
     <?php endif; ?>
 </div>
+<?php endif; ?>
 <?php if (!$embedMedia && $itemMedia): ?>
 <div class="media-list property">
     <h4><?php echo $translate('Media'); ?></h4>
