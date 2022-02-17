@@ -18,6 +18,37 @@
   }
 }
 
+.expand,
+.collapse {
+  display: inline-block;
+}
+
+.expand:after,
+.collapse:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.expand:after {
+  content: "\f0da";
+}
+
+.collapse:after {
+  content: "\f0d7";
+}
+
+.collapsible {
+  display: none;
+}
+
+.collapse + .collapsible {
+  width: 100%;
+  display: block;
+  padding: (.5 * $spacing-unit) $spacing-unit;
+  border: 1px solid $grey-color;
+  margin: (.5 * $spacing-unit) 0 $spacing-unit;
+}
+
 header ul.navigation {
   display: inline-block
 }
@@ -241,9 +272,22 @@ body:not([class]) .page-content .wrapper {
         text-overflow: ellipsis;
     }
     
-    a.resource-link,
     .values {
         width: 70%;
+    }
+
+    .value {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &:not(:last-child) {
+            margin-bottom: .5 * $spacing-unit;
+        }
+    }
+
+    .value-content:not(:only-child) {
+        margin-right: .5 * $spacing-unit;
     }
 
     .resource-link {
@@ -257,6 +301,12 @@ body:not([class]) .page-content .wrapper {
         }
         
     }
+}
+
+.property .language {
+  background-color: $grey-color-light;
+  padding: 0 (.25 * $spacing-unit);
+  margin-right: .25 * $spacing-unit;
 }
 
 .media-list {

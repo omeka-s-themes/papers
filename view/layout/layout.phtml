@@ -11,6 +11,7 @@ $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/tablesaw/tablesaw.stackonly.jquery.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
 $this->trigger('view.layout');
+$this->jsTranslate();
 $title = $this->pageTitle($site->title());
 $logo = $this->themeSettingAssetUrl('logo');
 $bg = $this->themeSettingAssetUrl('background_image');
