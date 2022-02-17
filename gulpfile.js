@@ -7,25 +7,13 @@ var autoprefixer = require('autoprefixer');
 
 function compileCss() {
     return gulp.src('./asset/sass/*.scss')
-        .pipe(sass({
-            outputStyle: 'compressed',
-            includePaths: ['node_modules/susy/sass']
-        }).on('error', sass.logError))
-        .pipe(postcss([
-            autoprefixer({browsers: ['> 5%', '> 5% in US', 'last 2 versions']})
-        ]))
+        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./asset/css'));  
 }
 
 function compileScriptoCss() {
     return gulp.src('./asset/sass/scripto/*.scss')
-    .pipe(sass({
-        outputStyle: 'compressed',
-        includePaths: ['node_modules/susy/sass']
-    }).on('error', sass.logError))
-    .pipe(postcss([
-        autoprefixer({browsers: ['> 5%', '> 5% in US', 'last 2 versions']})
-    ]))
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./asset/css/scripto'));  
 }
 
