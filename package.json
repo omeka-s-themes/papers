@@ -1,6 +1,6 @@
 {
   "name": "papers",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "A Omeka S theme for Papers of the War Department.",
   "main": "gulpfile.js",
   "scripts": {
