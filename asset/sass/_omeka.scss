@@ -49,6 +49,11 @@
   margin: (.5 * $spacing-unit) 0 $spacing-unit;
 }
 
+.site-header .wrapper > h1 {
+  margin: 0;
+  padding: 0;
+}
+
 header ul.navigation {
   display: inline-block
 }
@@ -205,7 +210,7 @@ body:not([class]) .page-content .wrapper {
     margin: 0 auto;
 }
 
-.item.browse .resource-list {
+.browse .resource-list {
     @include resource-list;
 }
 
@@ -247,9 +252,15 @@ body:not([class]) .page-content .wrapper {
     font-variant: small-caps;
 }
 
-.properties {
+#content .wrapper {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.item-with-metadata .resource.show > dl:not(:first-of-type),
+#content .wrapper > dl:not(:first-of-type) {
+    border-top: 1px solid $grey-color-dark;
+    margin-top: -.5 * $spacing-unit;
 }
 
 .media-list,
@@ -257,12 +268,14 @@ body:not([class]) .page-content .wrapper {
     display: flex;
     width: 100%;
     padding: (.25 * $spacing-unit) 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 
     &:not(:last-child) {
         border-bottom: 1px solid $grey-color-dark;
     }
     
-    h4 {
+    dt {
         width: 30%;
         padding-right: $spacing-unit;
         text-align: right;
@@ -272,11 +285,8 @@ body:not([class]) .page-content .wrapper {
         text-overflow: ellipsis;
     }
     
-    .values {
+    dd.value {
         width: 70%;
-    }
-
-    .value {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -290,17 +300,18 @@ body:not([class]) .page-content .wrapper {
         margin-right: .5 * $spacing-unit;
     }
 
-    .resource-link {
-        display: flex;
-        align-items: center;
-        
-        img {
-            width: 1.5 * $spacing-unit;
-            height: 1.5 * $spacing-unit;
-            margin-right: (.25 * $spacing-unit);
-        }
-        
+}
+
+.resource-link {
+    display: flex;
+    align-items: center;
+    
+    img {
+        width: 1.5 * $spacing-unit;
+        height: 1.5 * $spacing-unit;
+        margin-right: (.25 * $spacing-unit);
     }
+    
 }
 
 .property .language {
@@ -401,7 +412,7 @@ body:not([class]) .page-content .wrapper {
   margin: $spacing-unit 0 0;
 }
 
-#linked-filter h4 {
+#linked-filter label {
   margin: (.25 * $spacing-unit) (.5 * $spacing-unit) (.25 * $spacing-unit) 0;
 }
 
@@ -598,7 +609,7 @@ body:not([class]) .page-content .wrapper {
         align-self: flex-start;
     }
     
-    .property h4 {
+    .property dt {
           padding-right: (.5 * $spacing-unit);
     }
 

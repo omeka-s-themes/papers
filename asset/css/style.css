@@ -93,11 +93,11 @@ li > ol {
  * Links
  */
 a {
-  color: #006ba3;
+  color: #006295;
   text-decoration: none;
 }
 a:visited {
-  color: #1756a9;
+  color: #1a4987;
 }
 a:hover {
   color: #111;
@@ -208,7 +208,7 @@ table thead tr {
   background-color: rgba(255, 255, 255, 0.05);
 }
 table tr {
-  background-color: rgba(0, 107, 163, 0.05);
+  background-color: rgba(0, 98, 149, 0.05);
 }
 table tr:nth-child(even) {
   background-color: rgba(255, 204, 0, 0.05);
@@ -547,7 +547,7 @@ ul.user-menu {
   padding: 3.75px 7.5px;
 }
 .section-nav a.active {
-  background-color: #deeafa;
+  background-color: #c5d9f4;
   border-radius: 20px;
 }
 
@@ -881,6 +881,11 @@ table td:not(:last-child) {
   margin: 15px 0 30px;
 }
 
+.site-header .wrapper > h1 {
+  margin: 0;
+  padding: 0;
+}
+
 header ul.navigation {
   display: inline-block;
 }
@@ -1024,13 +1029,13 @@ header ul.navigation {
   border-bottom: 1px solid #8e8e8e;
   padding-bottom: 30px;
 }
-.preview-block .resource-list .item-meta {
+.preview-block .resource-list .resource-meta {
   width: 100%;
 }
-.preview-block .resource-list .item-thumbnail {
+.preview-block .resource-list .resource-thumbnail {
   margin-left: 30px;
 }
-.preview-block .resource-list h4 {
+.preview-block .resource-list .resource-title {
   margin-bottom: 0;
   font-variant: small-caps;
 }
@@ -1043,26 +1048,26 @@ body:not([class]) .page-content .wrapper {
   margin: 0 auto;
 }
 
-.item.browse .resource-list {
+.browse .resource-list {
   list-style: none;
   margin: 30px 0;
   border-top: 1px solid #8e8e8e;
   padding-top: 30px;
 }
-.item.browse .resource-list .resource {
+.browse .resource-list .resource {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 30px;
   border-bottom: 1px solid #8e8e8e;
   padding-bottom: 30px;
 }
-.item.browse .resource-list .item-meta {
+.browse .resource-list .resource-meta {
   width: 100%;
 }
-.item.browse .resource-list .item-thumbnail {
+.browse .resource-list .resource-thumbnail {
   margin-left: 30px;
 }
-.item.browse .resource-list h4 {
+.browse .resource-list .resource-title {
   margin-bottom: 0;
   font-variant: small-caps;
 }
@@ -1102,9 +1107,15 @@ body:not([class]) .page-content .wrapper {
   font-variant: small-caps;
 }
 
-.properties {
+#content .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.item-with-metadata .resource.show > dl:not(:first-of-type),
+#content .wrapper > dl:not(:first-of-type) {
+  border-top: 1px solid #8e8e8e;
+  margin-top: -15px;
 }
 
 .media-list,
@@ -1112,13 +1123,15 @@ body:not([class]) .page-content .wrapper {
   display: flex;
   width: 100%;
   padding: 7.5px 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 .media-list:not(:last-child),
 .property:not(:last-child) {
   border-bottom: 1px solid #8e8e8e;
 }
-.media-list h4,
-.property h4 {
+.media-list dt,
+.property dt {
   width: 30%;
   padding-right: 30px;
   text-align: right;
@@ -1127,31 +1140,27 @@ body:not([class]) .page-content .wrapper {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.media-list .values,
-.property .values {
+.media-list dd.value,
+.property dd.value {
   width: 70%;
-}
-.media-list .value,
-.property .value {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.media-list .value:not(:last-child),
-.property .value:not(:last-child) {
+.media-list dd.value:not(:last-child),
+.property dd.value:not(:last-child) {
   margin-bottom: 15px;
 }
 .media-list .value-content:not(:only-child),
 .property .value-content:not(:only-child) {
   margin-right: 15px;
 }
-.media-list .resource-link,
-.property .resource-link {
+
+.resource-link {
   display: flex;
   align-items: center;
 }
-.media-list .resource-link img,
-.property .resource-link img {
+.resource-link img {
   width: 45px;
   height: 45px;
   margin-right: 7.5px;
@@ -1254,7 +1263,7 @@ body:not([class]) .page-content .wrapper {
   margin: 30px 0 0;
 }
 
-#linked-filter h4 {
+#linked-filter label {
   margin: 7.5px 15px 7.5px 0;
 }
 
@@ -1447,7 +1456,7 @@ table td:not(:last-child) {
     align-self: flex-start;
   }
 
-  .property h4 {
+  .property dt {
     padding-right: 15px;
   }
 
