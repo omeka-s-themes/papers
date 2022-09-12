@@ -11,7 +11,7 @@ class RgbaColor extends AbstractHelper
             return;
         }
         if (strlen($hexColor) < 6) {
-            $hexColor = "#{$hexcolor[0]}{$hexcolor[0]}{$hexcolor[1]}{$hexcolor[1]}{$hexcolor[2]}{$hexcolor[2]}";
+            $hexColor = "#{$hexColor[0]}{$hexColor[0]}{$hexColor[1]}{$hexColor[1]}{$hexColor[2]}{$hexColor[2]}";
         }
         list($colorR, $colorG, $colorB) = sscanf($hexColor, "#%02x%02x%02x");
         return "rgba({$colorR},{$colorG},{$colorB}, .08)";
