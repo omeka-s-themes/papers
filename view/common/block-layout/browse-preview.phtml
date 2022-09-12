@@ -20,10 +20,10 @@ foreach ($this->resources as $resource):
     $body = $bodyTerm ? $resource->value($bodyTerm) : $resource->displayDescription();
 ?>
     <li class="<?php echo $this->resourceType; ?> resource">
-        <div class="item-meta">
+        <div class="resource-meta">
             <?php
             if ($showHeading):
-                echo '<h4>' . $resource->link($heading) . '</h4>'; 
+                echo $resource->link($heading, null, ['class' => 'resource-title']); 
             endif; ?>
             <?php if ($showBody && $body): ?>
             <div class="description"><?php echo $escape($body); ?></div>
@@ -31,7 +31,7 @@ foreach ($this->resources as $resource):
         </div>
         <?php
         if ($showThumbnail):
-            echo $resource->linkRaw($this->thumbnail($resource, 'medium', ['title' => $heading]), null, ['class' => 'item-thumbnail']);
+            echo $resource->linkRaw($this->thumbnail($resource, 'medium', ['title' => $heading]), null, ['class' => 'resource-thumbnail']);
         endif;?>
     </li>
 <?php endforeach; ?>
