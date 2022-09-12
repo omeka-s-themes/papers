@@ -43,7 +43,7 @@ foreach ($itemSets as $itemSet):
 ?>
     <li class="item-set resource">
         <div class="resource-meta">
-            <?php echo $itemSet->link($heading, null, ['class' => 'resource-title', 'id' => 'resource-label-' . $itemSet->id()]); ?>
+            <?php echo $itemSet->link($heading, null, ['class' => 'resource-title']); ?>
             <?php if ($body): ?>
             <div class="description"><?php echo $escape($body); ?></div>
             <?php endif; ?>

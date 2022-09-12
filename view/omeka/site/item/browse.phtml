@@ -58,7 +58,7 @@ foreach ($items as $item):
 ?>
     <li class="item resource">
         <div class="resource-meta">
-            <?php echo $item->link($heading, null, ['class' => 'resource-title', 'id' => 'resource-label-' . $item->id()]); ?>
+            <?php echo $item->link($heading, null, ['class' => 'resource-title']); ?>
             <?php if ($body): ?>
             <div class="description"><?php echo $escape($body); ?></div>
             <?php endif; ?>
