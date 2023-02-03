@@ -1227,6 +1227,12 @@ body:not([class]) .page-content .wrapper {
   font-size: 22.5px;
 }
 
+.field button {
+  border-width: 1px;
+  font-size: 13.5px;
+  margin-left: 7.5px;
+}
+
 .field .inputs {
   width: 80%;
   padding-left: 7.5px;

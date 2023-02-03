@@ -376,6 +376,12 @@ body:not([class]) .page-content .wrapper {
     font-size: 1.25 * $base-font-size;
 }
 
+.field button {
+    border-width: 1px;
+    font-size: .75 * $base-font-size;
+    margin-left: .25 * $spacing-unit;
+}
+
 .field .inputs {
     width: 80%;
     padding-left: .25 * $spacing-unit;
