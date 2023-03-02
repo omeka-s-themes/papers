@@ -477,7 +477,7 @@ body:not([class]) .page-content .wrapper {
 .results .result-title {
   display: inline-block;
   color: #000;
-  padding: (.25 * $spacing-unit) 0;
+  padding: (.25 * $spacing-unit);
 }
 
 .results .result-title a {
