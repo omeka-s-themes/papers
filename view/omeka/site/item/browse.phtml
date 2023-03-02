@@ -1,6 +1,9 @@
 <?php
 $escape = $this->plugin('escapeHtml');
 $translate = $this->plugin('translate');
+$filterLocale = (bool) $this->siteSetting('filter_locale_values');
+$lang = $this->lang();
+$valueLang = $filterLocale ? [$lang, ''] : null;
 $this->htmlElement('body')->appendAttribute('class', 'item resource browse');
 $siteItemSets = $site->siteItemSets();
 
@@ -40,19 +43,21 @@ $bodyTerm = $this->siteSetting('browse_body_property_term');
 <ul class="resource-list">
 <?php
 foreach ($items as $item):
-    $heading = $headingTerm ? $item->value($headingTerm, ['default' => $translate('[Untitled]')]) : $item->displayTitle();
-    $body = $bodyTerm ? $item->value($bodyTerm) : $item->displayDescription();
+    $heading = $headingTerm ? $item->value($headingTerm, ['default' => $translate('[Untitled]'), 'lang' => $valueLang]) : $item->displayTitle(null, $valueLang);
+    $body = $bodyTerm ? $item->value($bodyTerm, ['lang' => $valueLang]) : $item->displayDescription(null, $valueLang);
+    $linkContent = '';
+    if ($thumbnail = $this->thumbnail($item, 'medium', ['class' => 'resource-thumbnail'])) {
+        $linkContent .= $thumbnail;
+    }
+    $linkContent .= $heading;
 ?>
     <li class="item resource">
         <div class="resource-meta">
-            <?php echo $item->link($heading, null, ['class' => 'resource-title']); ?>
+            <?php echo $item->linkRaw($linkContent, null, ['class' => 'resource-title']); ?>
             <?php if ($body): ?>
             <div class="description"><?php echo $escape($body); ?></div>
             <?php endif; ?>
         </div>
-        <?php if ($itemThumbnail = $this->thumbnail($item, 'medium', ['alt' => ''])): ?>
-        <?php echo $item->linkRaw($itemThumbnail, null, ['class' => 'resource-thumbnail', 'aria-hidden' => 'true', 'tabindex' => '-1']); ?>
-        <?php endif; ?>
     </li>
 <?php endforeach; ?>
 </ul>

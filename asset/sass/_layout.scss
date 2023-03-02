@@ -413,6 +413,24 @@ ul.messages .error {
   content: "*";
 }
 
+
+.filter {
+  display: inline-block;
+  margin: 0 $spacing-unit $spacing-unit 0;
+}
+
+.filter-label {
+  font-weight: bold;
+}
+
+.filter-label, .filter-value {
+  padding: (.25 * $spacing-unit);
+}
+
+.filter-value {
+  background-color: transparentize($yellow-color, .5);
+}
+
 .browse-controls {
   display: flex;
   margin-bottom: .5 * $spacing-unit;
