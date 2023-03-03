@@ -214,6 +214,11 @@ body:not([class]) .page-content .wrapper {
     @include resource-list;
 }
 
+.resource-list .resource-link img {
+    width: auto;
+    height: auto;
+}
+  
 .browse-controls {
     align-items: center;
 }
@@ -309,8 +314,7 @@ body:not([class]) .page-content .wrapper {
         width: 1.5 * $spacing-unit;
         height: 1.5 * $spacing-unit;
         margin-right: (.25 * $spacing-unit);
-    }
-    
+    }    
 }
 
 .property .language {
@@ -543,6 +547,14 @@ body:not([class]) .page-content .wrapper {
   }
 }
 
+.faceted-browse-page .resource-list .resource {
+  display: block;
+}
+
+.faceted-browse-page .resource-list .resource-link {
+  width: 100%;
+}
+
 @media screen and (max-width:39.9375em) {
     #search {
       margin-left: 0;
@@ -613,7 +625,7 @@ body:not([class]) .page-content .wrapper {
     .item.browse .resource-list .item-thumbnail {
         align-self: flex-start;
     }
-    
+
     .property dt {
           padding-right: (.5 * $spacing-unit);
     }

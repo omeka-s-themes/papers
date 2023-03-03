@@ -1091,6 +1091,11 @@ body:not([class]) .page-content .wrapper {
   font-variant: small-caps;
 }
 
+.resource-list .resource-link img {
+  width: auto;
+  height: auto;
+}
+
 .browse-controls {
   align-items: center;
 }
@@ -1408,6 +1413,14 @@ body:not([class]) .page-content .wrapper {
 .index.search .results ul + a {
   display: block;
   margin-top: 30px;
+}
+
+.faceted-browse-page .resource-list .resource {
+  display: block;
+}
+
+.faceted-browse-page .resource-list .resource-link {
+  width: 100%;
 }
 
 @media screen and (max-width: 39.9375em) {
