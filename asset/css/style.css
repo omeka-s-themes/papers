@@ -1498,6 +1498,30 @@ table td:not(:last-child) {
     padding-right: 15px;
   }
 
+  .media-list,
+.property dt,
+.property dd.value {
+    width: 100%;
+    text-align: left;
+  }
+
+  .property dt {
+    margin-bottom: 7.5px;
+  }
+
+  .property dd.value {
+    margin-left: 30px;
+  }
+  .property dd.value:not(:last-child) {
+    margin-bottom: 7.5px;
+  }
+
+  .media-embeds img,
+.media-embeds video,
+.media-embeds audio {
+    margin: 7.5px 0;
+  }
+
   .sitewide-search-form ~ h2,
 .sitewide-search-form ~ .pagination,
 .results > ul > li {

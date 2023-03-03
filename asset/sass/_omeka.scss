@@ -630,6 +630,32 @@ body:not([class]) .page-content .wrapper {
           padding-right: (.5 * $spacing-unit);
     }
 
+    .media-list, 
+    .property dt,
+    .property dd.value {
+      width: 100%;
+      text-align: left;
+    }
+
+    .property dt {
+      margin-bottom: .25 * $spacing-unit;
+    }
+
+    .property dd.value {
+      margin-left: $spacing-unit;
+
+      &:not(:last-child) {
+        margin-bottom: .25 * $spacing-unit;
+      }
+    }
+
+
+    .media-embeds img,
+    .media-embeds video,
+    .media-embeds audio {
+      margin: (.25 * $spacing-unit) 0;
+    }
+
     .sitewide-search-form ~ h2,
     .sitewide-search-form ~ .pagination,
     .results > ul > li {
