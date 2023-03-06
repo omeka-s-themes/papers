@@ -279,17 +279,23 @@ body:not([class]) .page-content .wrapper {
         border-bottom: 1px solid $grey-color-dark;
     }
     
+    dl {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: (.5 * $spacing-unit) 0;
+    }
+
     dt {
         width: 30%;
         padding-right: $spacing-unit;
-        text-align: right;
         margin-bottom: 0;
         font-variant: small-caps;
         overflow: hidden;
         text-overflow: ellipsis;
     }
     
-    dd.value {
+    dd {
         width: 70%;
         display: flex;
         align-items: center;
@@ -626,22 +632,19 @@ body:not([class]) .page-content .wrapper {
         align-self: flex-start;
     }
 
-    .property dt {
-          padding-right: (.5 * $spacing-unit);
-    }
-
     .media-list, 
-    .property dt,
-    .property dd.value {
+    .property > dt,
+    .property dd {
       width: 100%;
       text-align: left;
     }
 
     .property dt {
       margin-bottom: .25 * $spacing-unit;
+      padding-right: (.5 * $spacing-unit);
     }
 
-    .property dd.value {
+    .property dd {
       margin-left: $spacing-unit;
 
       &:not(:last-child) {

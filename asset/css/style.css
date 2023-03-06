@@ -1154,25 +1154,31 @@ body:not([class]) .page-content .wrapper {
 .property:not(:last-child) {
   border-bottom: 1px solid #8e8e8e;
 }
+.media-list dl,
+.property dl {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
 .media-list dt,
 .property dt {
   width: 30%;
   padding-right: 30px;
-  text-align: right;
   margin-bottom: 0;
   font-variant: small-caps;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.media-list dd.value,
-.property dd.value {
+.media-list dd,
+.property dd {
   width: 70%;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.media-list dd.value:not(:last-child),
-.property dd.value:not(:last-child) {
+.media-list dd:not(:last-child),
+.property dd:not(:last-child) {
   margin-bottom: 15px;
 }
 .media-list .value-content:not(:only-child),
@@ -1494,25 +1500,22 @@ table td:not(:last-child) {
     align-self: flex-start;
   }
 
-  .property dt {
-    padding-right: 15px;
-  }
-
   .media-list,
-.property dt,
-.property dd.value {
+.property > dt,
+.property dd {
     width: 100%;
     text-align: left;
   }
 
   .property dt {
     margin-bottom: 7.5px;
+    padding-right: 15px;
   }
 
-  .property dd.value {
+  .property dd {
     margin-left: 30px;
   }
-  .property dd.value:not(:last-child) {
+  .property dd:not(:last-child) {
     margin-bottom: 7.5px;
   }
 
