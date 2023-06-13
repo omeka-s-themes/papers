@@ -381,10 +381,6 @@ body:not([class]) .page-content .wrapper {
     padding-right: (.25 * $spacing-unit);
 }
 
-.field-meta .label {
-    font-size: 1.25 * $base-font-size;
-}
-
 .field button {
     border-width: 1px;
     font-size: .75 * $base-font-size;

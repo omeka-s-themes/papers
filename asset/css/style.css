@@ -1253,10 +1253,6 @@ body:not([class]) .page-content .wrapper {
   padding-right: 7.5px;
 }
 
-.field-meta .label {
-  font-size: 22.5px;
-}
-
 .field button {
   border-width: 1px;
   font-size: 13.5px;
