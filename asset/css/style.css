@@ -715,7 +715,6 @@ ul.messages .error {
 
 .browse-controls {
   display: flex;
-  margin-bottom: 15px;
   width: 100%;
 }
 .browse-controls nav.pagination:only-child {
@@ -1099,14 +1098,21 @@ body:not([class]) .page-content .wrapper {
 .browse-controls {
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: -15px;
 }
 
 .browse-controls .sorting {
-  width: 30%;
   display: flex;
 }
 .browse-controls .sorting select {
   margin-right: 3.75px;
+}
+
+.browse-controls .pagination,
+.browse-controls .advanced-search,
+.browse-controls .sorting {
+  margin-bottom: 15px;
 }
 
 .browse-controls .pagination form {
@@ -1492,10 +1498,6 @@ table td:not(:last-child) {
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
-  }
-
-  .browse-controls .advanced-search {
-    margin: 15px;
   }
 
   .browse-controls .pagination {

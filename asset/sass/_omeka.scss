@@ -223,10 +223,11 @@ body:not([class]) .page-content .wrapper {
 .browse-controls {
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: -.5 * $spacing-unit;
 }
 
 .browse-controls .sorting {
-    width: 30%;
     display: flex;
         
     select {
@@ -234,6 +235,12 @@ body:not([class]) .page-content .wrapper {
     }
 }
     
+.browse-controls .pagination,
+.browse-controls .advanced-search,
+.browse-controls .sorting {
+    margin-bottom: .5 * $spacing-unit;
+}
+
 .browse-controls .pagination form {
     margin-right: (.5 * $spacing-unit);
 }
@@ -624,10 +631,6 @@ body:not([class]) .page-content .wrapper {
         flex-wrap: wrap;
         justify-content: space-between;
         text-align: center;
-    }
-
-    .browse-controls .advanced-search {
-        margin: (.5 * $spacing-unit);
     }
     
     .browse-controls .pagination {
