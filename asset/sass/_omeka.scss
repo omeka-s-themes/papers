@@ -222,29 +222,20 @@ body:not([class]) .page-content .wrapper {
   
 .browse-controls {
     align-items: center;
+    justify-content: space-between;
 }
 
 .browse-controls .sorting {
-    order: 1;
-    margin-right: (.5 * $spacing-unit);
     width: 30%;
     display: flex;
         
     select {
-      width: 40%;
+      margin-right: .125 * $spacing-unit;
     }
 }
     
-.browse-controls .advanced-search {
-    order: 2;
-}
-
-.browse-controls .pagination {
-    order: 3;
-    
-    form {
-        margin-right: (.5 * $spacing-unit);
-    }
+.browse-controls .pagination form {
+    margin-right: (.5 * $spacing-unit);
 }
 
 .wrapper > h2:first-child {
@@ -550,6 +541,24 @@ body:not([class]) .page-content .wrapper {
   }
 }
 
+.faceted-browse-page .tablesaw-bar {
+    overflow: hidden;
+    border-top: 1px solid #000;
+}
+
+.btn.tablesaw-nav-btn.tablesaw-btn {
+   margin-bottom: 0;
+}
+
+.faceted-browse-page .browse-controls .sorting {
+    width: auto;
+}
+
+.faceted-browse-page .browse-controls {
+    margin-bottom: 0;
+    flex-wrap: wrap;
+}
+
 .faceted-browse-page .resource-list .resource {
   display: block;
 }
@@ -613,7 +622,7 @@ body:not([class]) .page-content .wrapper {
 
     .browse-controls {
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         text-align: center;
     }
 
@@ -623,6 +632,10 @@ body:not([class]) .page-content .wrapper {
     
     .browse-controls .pagination {
         margin-left: 0;
+    }
+
+    .browse-controls .sorting {
+        width: auto;
     }
     
     .item.browse .resource-list .item-thumbnail {
