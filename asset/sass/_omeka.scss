@@ -192,6 +192,10 @@ header ul.navigation {
   }
 }
 
+.page .block-pageDateTime .property {
+  border-bottom: 0;
+}
+
 .preview-block .resource-list {
   @include resource-list;
 }
@@ -314,6 +318,7 @@ body:not([class]) .page-content .wrapper {
 .resource-link {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     
     img {
         width: 1.5 * $spacing-unit;
