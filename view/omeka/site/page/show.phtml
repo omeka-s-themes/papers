@@ -20,7 +20,7 @@ if ($activePage):
 <div class="blocks">
     <?php if ($activePage): ?>
         <?php if ($this->displayNavigation && $activePage['page']->hasPages()): ?>
-        <nav class="sub-menu"><?php echo $nav->menu()->renderSubMenu(); ?></nav>
+        <nav class="toc-block"><?php echo $nav->menu()->renderSubMenu(); ?></nav>
         <?php endif; ?>
     <?php endif; ?>
     
