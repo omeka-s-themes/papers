@@ -147,12 +147,28 @@ header ul.navigation {
 
 .page .toc-block ul ul a {
   padding-left: 0;
+  width: calc(100% - #{$spacing-unit});
 }
 
 .page .toc-block ul ul li {
   border-top: 1px solid #000;
   font-variant: normal;
   display: flex;
+  flex-wrap: wrap;
+}
+
+.page .toc-block ul ul ul {
+  padding-left: .875 * $spacing-unit;
+}
+
+.page .toc-block ul ul ul li {
+  border-top-color: transparent;
+  margin-top: -.5 * $spacing-unit;
+}
+
+.page .toc-block ul ul ul li:before {
+  content: "\2014";
+  font-family: $heading-font-family;
 }
 
 .page .toc-block > ul > li {
