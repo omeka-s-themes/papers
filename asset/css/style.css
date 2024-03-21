@@ -727,8 +727,8 @@ nav.pagination {
   align-items: center;
 }
 
-nav.pagination .row-count {
-  margin-left: 15px;
+nav.pagination form {
+  margin-right: 15px;
 }
 
 .browse-controls .pagination .button, .browse-controls .pagination .resource-list.preview + a {
@@ -748,7 +748,6 @@ nav.pagination .row-count {
 
 .previous.button, .resource-list.preview + a.previous {
   border-radius: 3px 0 0 3px;
-  margin-left: 15px;
   width: 30px;
   text-align: center;
 }
@@ -756,8 +755,13 @@ nav.pagination .row-count {
 .next.button, .resource-list.preview + a.next {
   border-radius: 0 3px 3px 0;
   margin-left: -1px;
+  margin-right: 15px;
   width: 30px;
   text-align: center;
+}
+
+.inactive.button, .resource-list.preview + a.inactive {
+  border-top-width: 3px;
 }
 
 .o-icon-first:before {

@@ -446,8 +446,8 @@ nav.pagination {
   align-items: center;
 }
 
-nav.pagination .row-count {
-  margin-left: .5 * $spacing-unit;
+nav.pagination form {
+    margin-right: .5 * $spacing-unit;
 }
 
 .browse-controls .pagination .button {
@@ -470,7 +470,6 @@ nav.pagination .row-count {
 
 .previous.button {
     border-radius: 3px 0 0 3px;
-    margin-left: .5 * $spacing-unit;
     width: $spacing-unit;
     text-align: center;
 }
@@ -478,8 +477,13 @@ nav.pagination .row-count {
 .next.button {
     border-radius: 0 3px 3px 0;
     margin-left: -1px;
+    margin-right: .5 * $spacing-unit;
     width: $spacing-unit;
     text-align: center;
+}
+
+.inactive.button {
+  border-top-width: 3px;
 }
 
 .o-icon-first:before {
