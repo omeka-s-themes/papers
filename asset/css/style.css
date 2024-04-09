@@ -1004,6 +1004,7 @@ header ul.navigation {
 
 .page .toc-block ul ul ul {
   padding-left: 26.25px;
+  width: 100%;
 }
 
 .page .toc-block ul ul ul li {

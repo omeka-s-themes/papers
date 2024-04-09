@@ -93,11 +93,11 @@ li > ol {
  * Links
  */
 a {
-  color: #006ba3;
+  color: #006295;
   text-decoration: none;
 }
 a:visited {
-  color: #1756a9;
+  color: #1a4987;
 }
 a:hover {
   color: #111;
@@ -208,7 +208,7 @@ table thead tr {
   background-color: rgba(255, 255, 255, 0.05);
 }
 table tr {
-  background-color: rgba(0, 107, 163, 0.05);
+  background-color: rgba(0, 98, 149, 0.05);
 }
 table tr:nth-child(even) {
   background-color: rgba(255, 204, 0, 0.05);
@@ -768,7 +768,7 @@ ul.user-menu {
   padding: 3.75px 7.5px;
 }
 .section-nav a.active {
-  background-color: #deeafa;
+  background-color: #c5d9f4;
   border-radius: 20px;
 }
 
@@ -2322,7 +2322,7 @@ ul.user-menu {
   padding: 3.75px 7.5px;
 }
 .section-nav a.active {
-  background-color: #deeafa;
+  background-color: #c5d9f4;
   border-radius: 20px;
 }
 
@@ -2471,9 +2471,25 @@ ul.messages .error {
   content: "*";
 }
 
+.filter {
+  display: inline-block;
+  margin: 0 30px 30px 0;
+}
+
+.filter-label {
+  font-weight: bold;
+}
+
+.filter-label, .filter-value {
+  padding: 7.5px;
+}
+
+.filter-value {
+  background-color: rgba(255, 204, 0, 0.5);
+}
+
 .browse-controls {
   display: flex;
-  margin-bottom: 15px;
   width: 100%;
 }
 .browse-controls nav.pagination:only-child {
@@ -2484,11 +2500,10 @@ ul.messages .error {
 nav.pagination {
   display: flex;
   align-items: center;
-  margin-left: auto;
 }
 
-nav.pagination .row-count {
-  margin-left: 15px;
+nav.pagination form {
+  margin-right: 15px;
 }
 
 .browse-controls .pagination .button {
@@ -2508,7 +2523,6 @@ nav.pagination .row-count {
 
 .previous.button {
   border-radius: 3px 0 0 3px;
-  margin-left: 15px;
   width: 30px;
   text-align: center;
 }
@@ -2516,8 +2530,13 @@ nav.pagination .row-count {
 .next.button {
   border-radius: 0 3px 3px 0;
   margin-left: -1px;
+  margin-right: 15px;
   width: 30px;
   text-align: center;
+}
+
+.inactive.button {
+  border-top-width: 3px;
 }
 
 .o-icon-first:before {
@@ -2704,8 +2723,8 @@ th.title {
 
 ul.messages .success {
   background-color: rgba(139, 181, 203, 0.3);
-  color: #006ba3;
-  border-color: #006ba3;
+  color: #006295;
+  border-color: #006295;
 }
 
 .trigger {
