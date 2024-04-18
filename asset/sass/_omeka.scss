@@ -213,6 +213,10 @@ header ul.navigation {
   border-bottom: 0;
 }
 
+.page .block-oembed {
+  align-self: start;
+}
+
 .preview-block .resource-list {
   @include resource-list;
 }
