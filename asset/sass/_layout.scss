@@ -56,7 +56,7 @@ table.tablesaw {
   display: block;
   text-align: center;
   position: relative;
-  background-color: transparentize($yellow-color, .2);
+  background-color: color-mix(in srgb, $yellow-color 80%, transparent);
   
   img {
     margin: (.5 * $spacing-unit);
@@ -428,7 +428,7 @@ ul.messages .error {
 }
 
 .filter-value {
-  background-color: transparentize($yellow-color, .5);
+  background-color: color-mix(in srgb, $yellow-color 50%, transparent);
 }
 
 .browse-controls {

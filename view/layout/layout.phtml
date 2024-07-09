@@ -17,6 +17,9 @@ $logo = $this->themeSettingAssetUrl('logo');
 $bg = $this->themeSettingAssetUrl('background_image');
 $bgStyle = $this->themeSetting('background_layout');
 $bgColor = $this->themeSetting('bg_color');
+$headerColor = $this->themeSetting('header_color');
+$buttonColor = $this->themeSetting('button_color');
+$linkColor = $this->themeSetting('link_color');
 if ($logo):
     $title = '<img src="' . $this->escapeHtml($logo) . '">';
 endif;
@@ -30,6 +33,20 @@ $userBar = $this->userBar();
         <?php echo $this->headLink(); ?>
         <?php echo $this->headStyle(); ?>
         <style>
+          :root {
+            <?php if ($headerColor): ?>
+            --header-color: <?php echo $headerColor; ?>;
+            <?php endif; ?>
+
+            <?php if ($buttonColor): ?>
+            --button-color: <?php echo $buttonColor; ?>;
+            <?php endif; ?>
+
+            <?php if ($linkColor): ?>
+            --link-color: <?php echo $linkColor; ?>;
+            <?php endif; ?>
+          }
+
           body {
             <?php if ($bgStyle == 'none'): ?>
                 background-image: none;
@@ -45,37 +62,6 @@ $userBar = $this->userBar();
                 <?php endif; ?>
             <?php endif; ?>
           }
-
-        <?php if ($headerColor = $this->themeSetting('header_color')): ?>
-        .site-title {
-          background-color: <?php echo $headerColor; ?>;
-        }
-
-        table tr:nth-child(2n) {
-            background-color: <?php echo $this->RgbaColor($headerColor); ?>; ?>;
-        }
-        <?php endif; ?>
-        
-        <?php if ($buttonColor = $this->themeSetting('button_color')): ?>
-        button,
-        .button,
-        .yellow.button,
-        [type="submit"],
-        .toc-block > ul > li {
-          background-color: <?php echo $buttonColor; ?>
-        }
-
-        table tr {
-            background-color: <?php echo $this->RgbaColor($buttonColor); ?>;
-        }
-        <?php endif; ?>
-        
-        <?php if ($linkColor = $this->themeSetting('link_color')): ?>
-        a:link,
-        a:visited {
-          color: <?php echo $linkColor; ?>;
-        }
-        <?php endif; ?>
         </style>
         <?php echo $this->headScript(); ?>
     </head>

@@ -13,9 +13,9 @@ $text-color:       #111 !default;
 $background-color: #fdfdfd !default;
 $brand-color:      #266cc7 !default;
 
-$yellow-color:     #fc0;
-$light-blue-color: #8bb5cb;
-$blue-color:       #006295;
+$yellow-color:     var(--header-color, #fc0);
+$light-blue-color: var(--button-color, #8bb5cb);
+$blue-color:       var(--link-color, #006295);
 
 
 $grey-color:       #cecece !default;

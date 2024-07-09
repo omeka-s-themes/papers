@@ -30,9 +30,6 @@ body {
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
   overflow-x: hidden;
   width: 100%;
 }
@@ -246,9 +243,9 @@ table {
   }
 
   tr {
-    background-color: transparentize($blue-color, .95);
+    background-color: color-mix(in srgb, $blue-color 5%, transparent);
     &:nth-child(even) {
-      background-color: transparentize($yellow-color, .95);
+      background-color: color-mix(in srgb, $yellow-color 5%, transparent);
     }
   }
   th, td {

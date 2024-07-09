@@ -30,9 +30,6 @@ body {
   -o-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
   overflow-x: hidden;
   width: 100%;
 }
@@ -93,7 +90,7 @@ li > ol {
  * Links
  */
 a {
-  color: #006295;
+  color: var(--link-color, #006295);
   text-decoration: none;
 }
 a:visited {
@@ -208,10 +205,10 @@ table thead tr {
   background-color: rgba(255, 255, 255, 0.05);
 }
 table tr {
-  background-color: rgba(0, 98, 149, 0.05);
+  background-color: color-mix(in srgb, var(--link-color, #006295) 5%, transparent);
 }
 table tr:nth-child(even) {
-  background-color: rgba(255, 204, 0, 0.05);
+  background-color: color-mix(in srgb, var(--header-color, #fc0) 5%, transparent);
 }
 table th, table td {
   padding: 10px 15px;
@@ -252,7 +249,7 @@ button,
 .resource-list.preview + a,
 input[type=submit] {
   cursor: pointer;
-  background-color: #8bb5cb;
+  background-color: var(--button-color, #8bb5cb);
   color: #000 !important;
   border: 1px solid #000;
   border-width: 3px 1px 1px;
@@ -274,7 +271,7 @@ button.yellow,
 .button.yellow,
 .resource-list.preview + a.yellow,
 input[type=submit].yellow {
-  background-color: #fc0;
+  background-color: var(--header-color, #fc0);
 }
 
 input:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]) {
@@ -355,7 +352,7 @@ table.tablesaw {
   display: block;
   text-align: center;
   position: relative;
-  background-color: rgba(255, 204, 0, 0.8);
+  background-color: color-mix(in srgb, var(--header-color, #fc0) 80%, transparent);
 }
 .site-title img {
   margin: 15px;
@@ -710,7 +707,7 @@ ul.messages .error {
 }
 
 .filter-value {
-  background-color: rgba(255, 204, 0, 0.5);
+  background-color: color-mix(in srgb, var(--header-color, #fc0) 50%, transparent);
 }
 
 .browse-controls {
@@ -1020,7 +1017,7 @@ header ul.navigation {
 .page .toc-block > ul > li {
   border-top: 3px solid #000;
   font-variant: small-caps;
-  background-color: #8bb5cb;
+  background-color: var(--button-color, #8bb5cb);
   width: calc(50% - 30px);
   margin: 30px 15px;
   padding: 15px 30px;
@@ -1352,7 +1349,7 @@ body:not([class]) .page-content .wrapper {
 .results > ul > li {
   border-top: 3px solid #000;
   font-variant: small-caps;
-  background-color: #8bb5cb;
+  background-color: var(--button-color, #8bb5cb);
   width: calc(50% - 30px);
   margin: 15px;
   padding: 15px 30px;
