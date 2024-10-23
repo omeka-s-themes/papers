@@ -1065,20 +1065,21 @@ header ul.navigation {
   padding-top: 30px;
 }
 .preview-block .resource-list .resource {
-  display: flex;
-  justify-content: flex-end;
   margin-bottom: 30px;
   border-bottom: 1px solid #8e8e8e;
   padding-bottom: 30px;
+  display: flow-root;
 }
-.preview-block .resource-list .resource-meta {
+.preview-block .resource-list .resource-link {
   width: 100%;
+  display: inline;
 }
-.preview-block .resource-list .resource-thumbnail {
+.preview-block .resource-list .resource .resource-link img {
   margin-left: 30px;
   float: right;
+  max-width: 13rem;
 }
-.preview-block .resource-list .resource-title {
+.preview-block .resource-list .resource-link {
   margin-bottom: 0;
   font-variant: small-caps;
 }
@@ -1098,20 +1099,21 @@ body:not([class]) .page-content .wrapper {
   padding-top: 30px;
 }
 .browse .resource-list .resource {
-  display: flex;
-  justify-content: flex-end;
   margin-bottom: 30px;
   border-bottom: 1px solid #8e8e8e;
   padding-bottom: 30px;
+  display: flow-root;
 }
-.browse .resource-list .resource-meta {
+.browse .resource-list .resource-link {
   width: 100%;
+  display: inline;
 }
-.browse .resource-list .resource-thumbnail {
+.browse .resource-list .resource .resource-link img {
   margin-left: 30px;
   float: right;
+  max-width: 13rem;
 }
-.browse .resource-list .resource-title {
+.browse .resource-list .resource-link {
   margin-bottom: 0;
   font-variant: small-caps;
 }
@@ -1535,7 +1537,7 @@ table td:not(:last-child) {
     width: auto;
   }
 
-  .item.browse .resource-list .item-thumbnail {
+  .item.browse .resource-list .resource-link img {
     align-self: flex-start;
   }
 

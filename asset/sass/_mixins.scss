@@ -16,23 +16,24 @@
     padding-top: $spacing-unit;
     
     .resource {
-        display: flex;
-        justify-content: flex-end;
         margin-bottom: $spacing-unit;        
         border-bottom: 1px solid $grey-color-dark;
         padding-bottom: $spacing-unit;
+        display: flow-root;
     }
     
-    .resource-meta {
+    .resource-link {
         width: 100%;
+        display: inline;
     }
     
-    .resource-thumbnail {
+    .resource .resource-link img {
         margin-left: $spacing-unit;
         float: right;
+        max-width: 13rem;
     }
     
-    .resource-title {
+    .resource-link {
         margin-bottom: 0;
         font-variant: small-caps;
     }
