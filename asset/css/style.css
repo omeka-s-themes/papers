@@ -1243,6 +1243,12 @@ body:not([class]) .page-content .wrapper {
   margin: 60px auto 0;
 }
 
+#advanced-search .field .button, #advanced-search .field .resource-list.preview + a,
+#advanced-search .field a.button,
+#advanced-search .field button {
+  border-width: 1px;
+}
+
 #advanced-search .value {
   margin-bottom: 7.5px !important;
 }
@@ -1468,6 +1474,10 @@ body:not([class]) .page-content .wrapper {
 
 .faceted-browse-page .resource-list .resource-link {
   width: 100%;
+}
+
+.field label.numeric-toggle-time.button {
+  padding: 3.75px 7.5px;
 }
 
 @media screen and (max-width: 39.9375em) {

@@ -368,6 +368,12 @@ body:not([class]) .page-content .wrapper {
     margin: (2 * $spacing-unit) auto 0;
 }
 
+#advanced-search .field .button,
+#advanced-search .field a.button,
+#advanced-search .field button {
+    @include simple-button;
+}
+
 #advanced-search .value {
     margin-bottom: (.25 * $spacing-unit) !important;
 }
@@ -598,6 +604,10 @@ body:not([class]) .page-content .wrapper {
 
 .faceted-browse-page .resource-list .resource-link {
   width: 100%;
+}
+
+.field label.numeric-toggle-time.button {
+  padding: (.125 * $spacing-unit) (.25 * $spacing-unit);
 }
 
 @media screen and (max-width:39.9375em) {

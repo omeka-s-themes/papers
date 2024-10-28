@@ -286,22 +286,10 @@ textarea {
 button,
 .button,
 input[type="submit"] {
-  cursor: pointer;
-  background-color: $light-blue-color;
-  color: #000 !important;
-  border: 1px solid #000;
-  border-width: 3px 1px 1px;
-  border-radius: 0;
-  &:disabled,
-  &.inactive {
-      background-color: $grey-color-light;
-      border: 1px solid $grey-color;
-      color: $grey-color;
-      cursor: default;
-  }
+  @include button;
 
   &.yellow {
-    background-color: $yellow-color;
+    @include yellow;
   }
 }
 
