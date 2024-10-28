@@ -76,7 +76,8 @@ table.tablesaw {
     bottom: 0;
     left: -9999px;
     right: -9999px;
-    background-color: transparentize($grey-color, .5);
+    background-color: $grey-color;
+    opacity: .5;
     z-index: -1;    
   }
 

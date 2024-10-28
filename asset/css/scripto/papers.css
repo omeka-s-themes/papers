@@ -30,9 +30,6 @@ body {
   -o-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
   overflow-x: hidden;
   width: 100%;
 }
@@ -93,7 +90,7 @@ li > ol {
  * Links
  */
 a {
-  color: #006295;
+  color: var(--link-color, #006295);
   text-decoration: none;
 }
 a:visited {
@@ -208,10 +205,10 @@ table thead tr {
   background-color: rgba(255, 255, 255, 0.05);
 }
 table tr {
-  background-color: rgba(0, 98, 149, 0.05);
+  background-color: color-mix(in srgb, var(--link-color, #006295) 5%, transparent);
 }
 table tr:nth-child(even) {
-  background-color: rgba(255, 204, 0, 0.05);
+  background-color: color-mix(in srgb, var(--header-color, #fc0) 5%, transparent);
 }
 table th, table td {
   padding: 10px 15px;
@@ -250,7 +247,7 @@ button,
 .button,
 input[type=submit] {
   cursor: pointer;
-  background-color: #8bb5cb;
+  background-color: var(--button-color, #8bb5cb);
   color: #000 !important;
   border: 1px solid #000;
   border-width: 3px 1px 1px;
@@ -269,7 +266,7 @@ input[type=submit].inactive {
 button.yellow,
 .button.yellow,
 input[type=submit].yellow {
-  background-color: #fc0;
+  background-color: var(--header-color, #fc0);
 }
 
 input:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]) {
@@ -1048,7 +1045,7 @@ nav.pagination .row-count {
   order: 2;
 }
 
-/** 
+/**
  * Media
  */
 .layout {
@@ -1108,9 +1105,11 @@ nav.pagination .row-count {
 .wikitext-flex {
   display: flex;
   width: 100%;
-  flex-wrap: wrap;
   margin-top: 12px;
   min-height: 400px;
+}
+#wikitext-layout.vertical .wikitext-flex {
+  flex-direction: column;
 }
 
 .wikitext-featherlight {
@@ -1352,7 +1351,7 @@ h2.media-item {
   margin: 0 15px;
 }
 
-/* 
+/*
  * Item
  */
 .resource-content {
@@ -1562,6 +1561,9 @@ div.resource-row {
 .change-summary {
   margin: -45px 0 15px;
 }
+#wikitext-layout.vertical .change-summary {
+  margin-top: 0;
+}
 
 #change-summary-text {
   width: 100%;
@@ -1679,7 +1681,7 @@ div.resource-row {
   margin-bottom: 0;
 }
 
-/* 
+/*
  * Revisions
  */
 #compare-table td {
@@ -1696,7 +1698,7 @@ div.resource-row {
   height: 100%;
 }
 
-/** 
+/**
  * User
  */
 td.diff-hist {
@@ -2130,7 +2132,7 @@ table.tablesaw {
   display: block;
   text-align: center;
   position: relative;
-  background-color: rgba(255, 204, 0, 0.8);
+  background-color: color-mix(in srgb, var(--header-color, #fc0) 80%, transparent);
 }
 .site-title img {
   margin: 15px;
@@ -2149,7 +2151,8 @@ table.tablesaw {
   bottom: 0;
   left: -9999px;
   right: -9999px;
-  background-color: rgba(206, 206, 206, 0.5);
+  background-color: #cecece;
+  opacity: 0.5;
   z-index: -1;
 }
 .site-nav ul {
@@ -2485,7 +2488,7 @@ ul.messages .error {
 }
 
 .filter-value {
-  background-color: rgba(255, 204, 0, 0.5);
+  background-color: color-mix(in srgb, var(--header-color, #fc0) 50%, transparent);
 }
 
 .browse-controls {
@@ -2664,7 +2667,7 @@ input[type=submit] {
 button:not(:disabled):hover,
 .button:not(:disabled):hover,
 input[type=submit]:not(:disabled):hover {
-  background-color: #fc0;
+  background-color: var(--header-color, #fc0);
 }
 button.inactive, button:disabled,
 .button.inactive,
@@ -2709,12 +2712,12 @@ th.title {
 
 #back-to-top {
   border-radius: 0;
-  background-color: #8bb5cb;
+  background-color: var(--button-color, #8bb5cb);
   border: 1px solid #000;
   border-top-width: 3px;
 }
 #back-to-top:hover {
-  background-color: #fc0;
+  background-color: var(--header-color, #fc0);
 }
 #back-to-top a {
   color: #000;
@@ -2722,9 +2725,19 @@ th.title {
 }
 
 ul.messages .success {
-  background-color: rgba(139, 181, 203, 0.3);
-  color: #006295;
-  border-color: #006295;
+  color: var(--link-color, #006295);
+  border-color: var(--link-color, #006295);
+  position: relative;
+}
+ul.messages .success:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--button-color, #8bb5cb);
+  opacity: 0.7;
 }
 
 .trigger {
@@ -2913,7 +2926,7 @@ ul.messages .success {
 }
 
 .wikitext-editor-buttons {
-  background-color: #8bb5cb;
+  background-color: var(--button-color, #8bb5cb);
   border: 1px solid #000;
   border-top-width: 3px;
 }

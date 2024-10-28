@@ -371,7 +371,8 @@ table.tablesaw {
   bottom: 0;
   left: -9999px;
   right: -9999px;
-  background-color: rgba(206, 206, 206, 0.5);
+  background-color: #cecece;
+  opacity: 0.5;
   z-index: -1;
 }
 .site-nav ul {
