@@ -1468,10 +1468,6 @@ body:not([class]) .page-content .wrapper {
   flex-wrap: wrap;
 }
 
-.faceted-browse-page .resource-list .resource {
-  display: block;
-}
-
 .faceted-browse-page .resource-list .resource-link {
   width: 100%;
 }
