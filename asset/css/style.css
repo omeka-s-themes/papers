@@ -870,6 +870,9 @@ table td:not(:last-child) {
 .expand,
 .collapse {
   display: inline-block;
+  min-height: 24px;
+  min-width: 24px;
+  text-align: center;
 }
 
 .expand:after,
@@ -1254,14 +1257,13 @@ body:not([class]) .page-content .wrapper {
   margin-bottom: 7.5px !important;
 }
 
-#advanced-search .remove-value {
+#advanced-search .inputs button.remove-value {
   text-indent: -9999px;
   position: relative;
-  width: 45px;
-  height: 45px;
+  min-width: 30px;
   margin-left: 7.5px;
 }
-#advanced-search .remove-value:before {
+#advanced-search .inputs button.remove-value:before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1285,6 +1287,10 @@ body:not([class]) .page-content .wrapper {
 .field-meta {
   width: 20%;
   padding-right: 7.5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: flex-start;
 }
 
 .field button {

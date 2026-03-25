@@ -21,6 +21,9 @@
 .expand,
 .collapse {
   display: inline-block;
+  min-height: 24px;
+  min-width: 24px;
+  text-align: center;
 }
 
 .expand:after,
@@ -378,11 +381,10 @@ body:not([class]) .page-content .wrapper {
     margin-bottom: (.25 * $spacing-unit) !important;
 }
 
-#advanced-search .remove-value {
+#advanced-search .inputs button.remove-value {
     text-indent: -9999px;
     position: relative;
-    width: (1.5 * $spacing-unit);
-    height: (1.5 * $spacing-unit);
+    min-width: $spacing-unit;
     margin-left: (.25 * $spacing-unit);
     
     &:before {
@@ -410,6 +412,10 @@ body:not([class]) .page-content .wrapper {
 .field-meta {
     width: 20%;
     padding-right: (.25 * $spacing-unit);
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+    align-items: flex-start;
 }
 
 .field button {
