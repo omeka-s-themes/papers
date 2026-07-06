@@ -362,18 +362,7 @@ table.tablesaw {
   width: 100%;
   line-height: 60.75px;
   text-align: center;
-  position: relative;
-}
-.site-nav:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -9999px;
-  right: -9999px;
-  background-color: #cecece;
-  opacity: 0.5;
-  z-index: -1;
+  background: rgba(206, 206, 206, 0.5);
 }
 .site-nav ul {
   list-style: none;
@@ -896,9 +885,9 @@ table td:not(:last-child) {
 .collapse + .collapsible {
   width: 100%;
   display: block;
-  padding: 15px 30px;
+  padding: 7.5px;
   border: 1px solid #cecece;
-  margin: 15px 0 30px;
+  margin: 7.5px 0;
 }
 
 .site-header .wrapper > h1 {
@@ -1253,57 +1242,48 @@ body:not([class]) .page-content .wrapper {
   border-width: 1px;
 }
 
-#advanced-search .value {
-  margin-bottom: 7.5px !important;
-}
-
-#advanced-search .inputs button.remove-value {
-  text-indent: -9999px;
-  position: relative;
-  min-width: 30px;
-  margin-left: 7.5px;
-}
-#advanced-search .inputs button.remove-value:before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  text-indent: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 #advanced-search .removable .value:only-of-type .remove-value {
   display: none;
 }
 
 .field {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  gap: 0 30px;
 }
 
 .field-meta {
   width: 20%;
-  padding-right: 7.5px;
+  padding: 3.75px 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
-  align-items: flex-start;
+  align-content: flex-start;
+}
+
+button.add-value {
+  min-height: 35.625px;
 }
 
 .field button {
   border-width: 1px;
   font-size: 13.5px;
-  margin-left: 7.5px;
 }
 
 .field .inputs {
   width: 80%;
-  padding-left: 7.5px;
 }
 
+@media screen and (max-width: 600px) {
+  .field {
+    flex-wrap: wrap;
+  }
+
+  .field .field-meta,
+.field .inputs {
+    width: 100%;
+  }
+}
 .field .field-description {
   font-size: 15.75px;
 }

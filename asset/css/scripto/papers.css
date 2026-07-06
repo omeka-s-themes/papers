@@ -2142,18 +2142,7 @@ table.tablesaw {
   width: 100%;
   line-height: 60.75px;
   text-align: center;
-  position: relative;
-}
-.site-nav:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -9999px;
-  right: -9999px;
-  background-color: #cecece;
-  opacity: 0.5;
-  z-index: -1;
+  background: rgba(206, 206, 206, 0.5);
 }
 .site-nav ul {
   list-style: none;
