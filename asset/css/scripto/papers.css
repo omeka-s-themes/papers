@@ -1,5 +1,46 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=EB+Garamond|Spectral+SC");
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/EBGaramond-Regular.woff2") format("woff2"), url("../fonts/EBGaramond-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/EBGaramond-Italic.woff2") format("woff2"), url("../fonts/EBGaramond-Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "EB Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/EBGaramond-Bold.woff2") format("woff2"), url("../fonts/EBGaramond-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "EB Garamond";
+  font-style: italic;
+  font-weight: bold;
+  font-display: swap;
+  src: url("../fonts/EBGaramond-BoldItalic.woff2") format("woff2"), url("../fonts/EBGaramond-BoldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Spectral SC";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/SpectralSC-Regular.woff2") format("woff2"), url("../fonts/SpectralSC-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Spectral SC";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/SpectralSC-Italic.woff2") format("woff2"), url("../fonts/SpectralSC-Italic.woff") format("woff");
+}
 /**
  * Reset some basic elements
  */

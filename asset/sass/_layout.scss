@@ -119,7 +119,7 @@ table.tablesaw {
 }
 
 .username {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .site-nav .page-link.user-toggle {
@@ -409,7 +409,7 @@ ul.messages .error {
 }
 
 .filter-label {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .filter-label, .filter-value {
@@ -512,6 +512,10 @@ nav.pagination form {
 
 .item .no-resources:before {
     content: "\f1b2";
+}
+
+.page .toc-block a {
+  font-weight: 600;
 }
 
 /**

@@ -1,5 +1,46 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=EB+Garamond|Spectral+SC");
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/EBGaramond-Regular.woff2") format("woff2"), url("../fonts/EBGaramond-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "EB Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/EBGaramond-Italic.woff2") format("woff2"), url("../fonts/EBGaramond-Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/EBGaramond-SemiBold.woff2") format("woff2"), url("../fonts/EBGaramond-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "EB Garamond";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/EBGaramond-SemiBoldItalic.woff2") format("woff2"), url("../fonts/EBGaramond-SemiBoldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Spectral SC";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/SpectralSC-Regular.woff2") format("woff2"), url("../fonts/SpectralSC-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Spectral SC";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/SpectralSC-Italic.woff2") format("woff2"), url("../fonts/SpectralSC-Italic.woff") format("woff");
+}
 /**
  * Reset some basic elements
  */
@@ -406,7 +447,7 @@ table.tablesaw {
 }
 
 .username {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .site-nav .page-link.user-toggle {
@@ -689,7 +730,7 @@ ul.messages .error {
 }
 
 .filter-label {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .filter-label, .filter-value {
@@ -787,6 +828,10 @@ nav.pagination form {
 
 .item .no-resources:before {
   content: "";
+}
+
+.page .toc-block a {
+  font-weight: 600;
 }
 
 /**
